@@ -127,7 +127,7 @@ export function buildDatasheetHtmlEn(product: Product, autoPrint = false): strin
 
   <p class="note">All values above apply to model ${esc(modelCode(product))} rated ${esc(powerEn)} only, as published in the manufacturer's official datasheet. This document is for technical and informational purposes only.</p>
   <div class="ft">
-    <span><b>Al-Raebi Energy Systems &amp; Solutions</b> — Technical Support &amp; Engineering Consultancy</span>
+    <span><b>Al-Raebi For Trading</b> — Technical Support &amp; Engineering Consultancy</span>
     <span>${esc(today)}</span>
   </div>
 </div>

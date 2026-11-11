@@ -159,7 +159,7 @@ export function buildDatasheetHtml(product: Product, autoPrint = false): string 
   ${product.suitableFor ? `<h3>لمن يناسب</h3><p style="font-size:8.2pt;line-height:1.7;margin:0">${esc(product.suitableFor)}</p>` : ""}
 
   <div class="ft">
-    <span><b>شركة الراعبي للتجارة</b> — Al-Raebi Energy Systems &amp; Solutions</span>
+    <span><b>شركة الراعبي للتجارة</b> — Al-Raebi For Trading</span>
     <span>${esc(today)} — صفحة 1</span>
   </div>
 </div>

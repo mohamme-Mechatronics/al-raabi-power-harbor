@@ -530,7 +530,7 @@ export function downloadPvsystReport(study: PvsystStudyResult, eco?: EconomicsRe
     <div class="plain" style="margin-top:6mm;font-size:8pt;line-height:1.7">
       Simulation based on monthly Meteonorm irradiation data at the project site, with the complete PVsyst loss chain:
       near shadings, soiling, IAM, ground reflection, thermal behaviour, module quality, LID, mismatch, DC wiring,
-      inverter efficiency and system unavailability. Report issued by the Engineering Department — Al-Raebi Energy Systems &amp; Solutions.
+      inverter efficiency and system unavailability. Report issued by the Engineering Department — Al-Raebi For Trading.
     </div>
   </div>
 </div>
@@ -583,7 +583,7 @@ ${hasEco ? `<div class="page">
       Assumptions: ${LIFETIME_YEARS}-year operating life, 0.5 %/year module degradation, 1 %/year O&amp;M cost,
       2 %/year energy tariff escalation, 6 % discount rate, 0.33 liter of diesel per kWh of generator output and
       0.75 kgCO2 per kWh displaced. Figures are indicative and prepared by the Engineering Department —
-      Al-Raebi Energy Systems &amp; Solutions.
+      Al-Raebi For Trading.
     </div>
   </div>
 </div>` : ""}

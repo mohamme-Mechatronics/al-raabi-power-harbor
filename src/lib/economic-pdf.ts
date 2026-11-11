@@ -177,7 +177,7 @@ export function downloadEconomicReport(
   ${compSvg}
   <div class="legend"><b style="color:#c0392b">■ الديزل والشبكة</b><b style="color:#15803d">■ منظومة الراعبي</b></div>
 
-  <div class="foot"><span>Al-Raebi Energy Systems &amp; Solutions</span><span>صفحة 1/2</span></div>
+  <div class="foot"><span>Al-Raebi For Trading</span><span>صفحة 1/2</span></div>
 </div>
 
 <div class="page">
@@ -215,7 +215,7 @@ export function downloadEconomicReport(
     وسعر لتر الديزل ${nf(eco.dieselPrice, 2)} دولار. الأرقام تقديرية أُعدّت بواسطة القسم الهندسي — الراعبي للتجارة.
   </div>
 
-  <div class="foot"><span>Al-Raebi Energy Systems &amp; Solutions</span><span>صفحة 2/2</span></div>
+  <div class="foot"><span>Al-Raebi For Trading</span><span>صفحة 2/2</span></div>
 </div>
 
 <script>window.onload=function(){window.focus();setTimeout(function(){window.print();},350);};</script>

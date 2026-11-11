@@ -515,7 +515,7 @@ export function EcoReport({ kw, price: price0, onBuy, onEdit, onSales, system, p
         </Sec>
         </div>
         <footer className="flex flex-wrap items-center justify-between gap-3 rounded-xl px-5 py-4" style={{ background: R.ink }}>
-          <div className="flex items-center gap-3"><span className="rounded bg-white px-2 py-1"><img src={LOGO} alt="Al-Raebi" className="h-12 w-auto" /></span><b dir="ltr" className="text-sm" style={{ color: "#fff" }}>Al-Raebi Energy Systems & Solutions</b></div>
+          <div className="flex items-center gap-3"><span className="rounded bg-white px-2 py-1"><img src={LOGO} alt="Al-Raebi" className="h-12 w-auto" /></span><b dir="ltr" className="text-sm" style={{ color: "#fff" }}>Al-Raebi For Trading</b></div>
           <span className="text-[12px]" style={{ color: "#9ca3af" }}>من إعداد شركة الراعبي للتجارة</span>
         </footer>
         </Page>
