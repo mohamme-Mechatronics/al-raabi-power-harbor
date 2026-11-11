@@ -106,7 +106,7 @@ const actesMark = actesMarkAsset.url;
 import actesWordmarkAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesWordmark = actesWordmarkAsset.url;
 
-import { findCatalogProductForSpec, type Product as CatalogProduct } from "@/lib/products-data";
+import { BRANDS, findCatalogProductForSpec, type Product as CatalogProduct } from "@/lib/products-data";
 import { officialCatalogUrl } from "@/lib/official-catalogs";
 import { itemImage } from "@/lib/item-images";
 
@@ -1470,53 +1470,15 @@ function HomeDashboard({ onService, onProducts }: { onService: (kind: "quote" | 
   );
 }
 
-const PARTNER_LINKS = [
-  { name: "Li-Power", url: "/lipower", from: 100, to: 245 },
-  { name: "PYLONTECH", url: "/pylontech", from: 270, to: 468 },
-  { name: "SUNTECH", url: "/suntech", from: 492, to: 686 },
-  { name: "HiTHIUM", url: "/hithium", from: 716, to: 886 },
-  { name: "sunways", url: "https://www.sunways-tech.com", from: 918, to: 1110 },
-];
-
 function PartnersStrip() {
-  const trackRef = useRef<HTMLDivElement>(null);
   return (
-    <section
-      aria-label="وكلاء وشركاء الراعبي"
-      className="shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
-    >
-      <div className="flex items-stretch">
-
-        <div ref={trackRef} className="min-w-0 flex-1 px-1 py-1">
-          <div className="relative w-full">
-            <img
-              src={partnersStrip}
-              alt="وكلاء الراعبي: Li Power، PYLONTECH، SUNTECH، HTHIUM، sunways"
-              loading="eager"
-              decoding="sync"
-              fetchPriority="high"
-              className="block h-auto w-full"
-            />
-            {PARTNER_LINKS.map((p) => (
-              <a
-                key={p.name}
-                href={p.url}
-                target={p.url.startsWith("/") ? undefined : "_blank"}
-                rel="noopener noreferrer"
-                aria-label={`موقع ${p.name} الرسمي`}
-                title={p.name}
-                className="absolute inset-y-0 rounded-lg transition hover:bg-navy/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
-                style={{ left: `${(p.from / 1200) * 100}%`, width: `${((p.to - p.from) / 1200) * 100}%` }}
-              />
-            ))}
-          </div>
-        </div>
-
+    <section aria-label="العلامات التجارية لدى الراعبي" className="shrink-0 border-y border-border bg-card py-3">
+      <div className="grid grid-cols-4 items-center gap-4 px-3 sm:grid-cols-7">
+        {BRANDS.map((b) => <Link key={b.slug} to="/brands/$brand" params={{ brand: b.slug }} title={b.brand} className="flex h-10 items-center justify-center"><img src={b.logo} alt={b.brand} className="max-h-8 w-full max-w-28 object-contain" /></Link>)}
       </div>
     </section>
   );
 }
-
 
 function Feature({ icon, text }: { icon: ReactNode; text: string }) {
   return <div className="flex items-center gap-3 border-r border-sidebar-foreground/25 pr-3 [&_svg]:size-6 [&_svg]:text-brand">{icon}<span>{text}</span></div>;
