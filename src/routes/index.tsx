@@ -1444,8 +1444,8 @@ function HomeDashboard({ onService, onProducts }: { onService: (kind: "quote" | 
   return (
     <div className="screen-enter flex min-h-0 w-full flex-col gap-2 lg:h-full">
       <CorporateHero />
-      <section data-photo-section className="min-h-0 shrink overflow-hidden rounded-2xl border border-border bg-card shadow-sm lg:flex-1 lg:max-h-[30dvh]">
-        <img src={homeHero} alt="الراعبي للتجارة" loading="eager" decoding="sync" fetchPriority="high" className="block aspect-[2064/416] w-full object-cover lg:h-full lg:w-full lg:aspect-auto" />
+      <section data-photo-section className="shrink-0 overflow-hidden lg:min-h-0 lg:shrink rounded-2xl border border-border bg-card shadow-sm lg:flex-1 lg:max-h-[30dvh]">
+        <img src={homeHero} alt="الراعبي للتجارة" loading="eager" decoding="sync" fetchPriority="high" className="block aspect-[16/7] w-full object-cover object-center sm:aspect-[1408/300] lg:h-full lg:w-full lg:aspect-auto" />
       </section>
 
 
