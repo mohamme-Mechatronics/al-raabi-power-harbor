@@ -87,13 +87,13 @@ const agricultureImage = agricultureImageAsset.url;
 import homeHeroAsset from "@/assets/brand/alraebi-home-hero.webp.asset.json";
 const homeHero = homeHeroAsset.url;
 
-import refCardQuoteAsset from "@/assets/imported/src/assets/card-quote.webp.asset.json";
+import refCardQuoteAsset from "@/assets/brand/alraebi-card-quote.webp.asset.json";
 const refCardQuote = refCardQuoteAsset.url;
-import refCardEnergyAsset from "@/assets/imported/src/assets/card-energy.webp.asset.json";
+import refCardEnergyAsset from "@/assets/brand/alraebi-card-energy.webp.asset.json";
 const refCardEnergy = refCardEnergyAsset.url;
-import refCardSupportAsset from "@/assets/imported/src/assets/card-support.webp.asset.json";
+import refCardSupportAsset from "@/assets/brand/alraebi-card-support.webp.asset.json";
 const refCardSupport = refCardSupportAsset.url;
-import refCardProductsAsset from "@/assets/imported/src/assets/card-products.webp.asset.json";
+import refCardProductsAsset from "@/assets/brand/alraebi-card-products.webp.asset.json";
 const refCardProducts = refCardProductsAsset.url;
 import ProductsCatalog from "@/components/products-catalog";
 
