@@ -130,9 +130,9 @@ function cleanSpeechText(raw: string) {
     .trim());
 }
 
-/** اسم الشركة بحروف كبيرة يُتهجّى حرفاً حرفاً في النطق الأجنبي، فنكتبه ككلمة واحدة «Actes». */
+/** اسم الشركة بحروف كبيرة يُتهجّى حرفاً حرفاً في النطق الأجنبي، فنكتبه «Al-Raebi». */
 function fixBrandSpeech(text: string) {
-  return text.replace(/ACTES/g, "Actes");
+  return text.replace(/AL-RAEBI/g, "Al-Raebi");
 }
 
 function speechText(arabic: string, lang: Lang, localized = false) {

@@ -8,7 +8,7 @@ const TERMS: [RegExp, string][] = [
   // منع تكرار «بالريال بالريال»، وتوحيد العملة إلى «بالريال اليمني» دائماً
   [new RegExp(`(?:${RIYAL}\\s+)+(?=${RIYAL})`, "g"), ""],
   [new RegExp(`${RIYAL}(?!${D}\\s*${YEMENI})`, "g"), "بِالرِّيَالِ اليَمَنِيّ"],
-  [/\bACTES\b|الراعبي|اكتس/gi, "الرَّاعِبِي"],
+  [/\bAl-Raebi\b|(?<![\u064B-\u0652])الراعبي(?![\u064B-\u0652])/gi, "الرَّاعِبِي"],
   [/دايا\s+(هايبرد\s+)?DEYE/gi, "دايا $1"],
   [/\bDEYE\b/gi, "دَايَا"],
   [/\bExcel\b|\bxlsx\b/gi, "إِكْسِل"],
@@ -134,13 +134,13 @@ export function prepareArabicSpeech(text: string): string {
     // أكواد موديلات المصنع بين قوسين (لاتينية/أرقام فقط) لا تُنطق
     .replace(/[（(][^()（）\u0621-\u064A]*(?:[（(][^()（）\u0621-\u064A]*[)）])?[^()（）\u0621-\u064A]*[)）]/g, " ")
     // رقم العرض: يُنطق حرفاً حرفاً ورقماً رقماً حتى لا تسقط الأصفار
-    .replace(/\bACTES\s*-\s*([A-Za-z]+)\s*(\d+)/g, (_m, letters: string, digits: string) => {
+    .replace(/\bRAEBI\s*-\s*([A-Za-z]+)\s*(\d+)/g, (_m, letters: string, digits: string) => {
       const L: Record<string, string> = { A: "إيه", B: "بي", C: "سي", D: "دي", E: "إي", F: "إف", G: "جي", H: "إتش", I: "آي", J: "جيه", K: "كيه", L: "إل", M: "إم", N: "إن", O: "أو", P: "بي", Q: "كيو", R: "آر", S: "إس", T: "تي", U: "يو", V: "في", W: "دبليو", X: "إكس", Y: "واي", Z: "زد" };
       const spelled = letters.toUpperCase().split("").map((c) => L[c] || c).join(" ");
       const nums = digits.split("").map((c) => ONES[Number(c)]).join(" ");
       return `الرَّاعِبِي ${spelled} ${nums} `;
     })
-    .replace(/\bACTES\s*-\s*/gi, "Al-Raebi، ")
+    .replace(/\bRAEBI\s*-\s*/gi, "الرَّاعِبِي، ")
     .replace(/(\d)(?=[A-Za-z\u0621-\u064A])/g, "$1 ")
     .replace(/([A-Za-z])(?=\d)/g, "$1 ")
     .replace(/(\d)\s*A\b/g, "$1 أمبير")
