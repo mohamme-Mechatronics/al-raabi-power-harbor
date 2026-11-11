@@ -40,8 +40,8 @@
       "capability": "secrets",
       "source": "ADMIN_PASSWORD",
       "outcome": "preserve",
-      "status": "pending",
-      "next_action": "User adds ADMIN_PASSWORD securely"
+      "status": "configured",
+      "next_action": "ADMIN_PASSWORD saved; admin sign-in to be confirmed by the user"
     },
     {
       "capability": "speech (TTS)",
