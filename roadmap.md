@@ -1,12 +1,8 @@
-# Import and publish ACTES
-- [x] Add progressive offline saving and Android web installation; test saved audio without connection and preview worker exclusion.
-- [ ] Verify published offline reload and opened video/PDF: requires deployment of the new worker.
-- [x] Supply Android APK tied to published site; signed, installed and launched in test Android; offline storage logic tested on audio and home page.
-- [ ] Confirm APK offline reopen on a real phone: user device test.
-- [x] Import complete application and externalize media.
-- [x] Preserve Cloud order store and speech integration; verify one UI write.
-- [x] Enable mobile voice guide; verify product narration/video and desktop quote flow.
-- [x] Check security and tests; request publication.
-- [ ] Import existing orders/notifications: waiting for CSV/JSON export.
-- [ ] Verify administration: waiting for securely supplied ADMIN_PASSWORD.
-- [ ] Confirm actual phone speaker/iOS playback: requires user's device test.
+# Import windows-sound-scout (ACTES)
+- [x] Copy all pages, code and settings from GitHub.
+- [x] Re-upload all media (photos, audio, videos, catalogs) into this project.
+- [x] Recreate orders and notifications storage in Cloud; verify one save and read.
+- [x] Verify voice narration and main pages.
+- [ ] Add ADMIN_PASSWORD: waiting for the user to enter it securely.
+- [ ] Import existing orders/notifications: waiting for an export from the old project.
+- [ ] Point the Windows desktop app at the new site address: after publishing.

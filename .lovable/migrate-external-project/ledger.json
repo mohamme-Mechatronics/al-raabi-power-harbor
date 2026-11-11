@@ -1,13 +1,61 @@
 {
   "source": "https://github.com/mohamme-Mechatronics/windows-sound-scout",
   "capabilities": [
-    {"capability": "application code and routes", "source": "GitHub", "outcome": "migrate", "status": "in_progress", "next_action": "Copy all pages, components and libraries; verify main pages"},
-    {"capability": "media bytes", "source": "561 asset pointers from source project", "outcome": "preserve", "status": "in_progress", "next_action": "Re-upload each file into this project with the same address"},
-    {"capability": "schema", "source": "orders and notifications", "outcome": "migrate", "status": "verified", "next_action": "Tables created in Cloud"},
-    {"capability": "existing records", "source": "source Cloud backend", "outcome": "migrate", "status": "pending", "next_action": "Needs orders/notifications export from the old project"},
-    {"capability": "auth identities", "source": "none (admin password only)", "outcome": "migrate", "status": "not_applicable", "next_action": "No user accounts in source"},
-    {"capability": "secrets", "source": "ADMIN_PASSWORD", "outcome": "preserve", "status": "pending", "next_action": "User adds ADMIN_PASSWORD securely"},
-    {"capability": "speech (TTS)", "source": "Lovable AI", "outcome": "preserve", "status": "pending", "next_action": "Verify /api/tts"},
-    {"capability": "endpoints", "source": "src/routes/api", "outcome": "preserve", "status": "preserved", "next_action": "Desktop app must point to the new site address after publish"}
+    {
+      "capability": "application code and routes",
+      "source": "GitHub",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "All pages copied; home, Pylontech, HiTHIUM, downloads load without errors; 13 tests pass"
+    },
+    {
+      "capability": "media bytes",
+      "source": "561 asset pointers from source project",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": "620 pointers re-uploaded with identical addresses; all load"
+    },
+    {
+      "capability": "schema",
+      "source": "orders and notifications",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "Tables created in Cloud; test order saved, read back with its code, rejected with a wrong code, then removed"
+    },
+    {
+      "capability": "existing records",
+      "source": "source Cloud backend",
+      "outcome": "migrate",
+      "status": "pending",
+      "next_action": "Needs orders/notifications export from the old project"
+    },
+    {
+      "capability": "auth identities",
+      "source": "none (admin password only)",
+      "outcome": "migrate",
+      "status": "not_applicable",
+      "next_action": "No user accounts in source"
+    },
+    {
+      "capability": "secrets",
+      "source": "ADMIN_PASSWORD",
+      "outcome": "preserve",
+      "status": "pending",
+      "next_action": "User adds ADMIN_PASSWORD securely"
+    },
+    {
+      "capability": "speech (TTS)",
+      "source": "Lovable AI",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": "Narration request returned audio"
+    },
+    {
+      "capability": "endpoints",
+      "source": "src/routes/api",
+      "outcome": "preserve",
+      "status": "preserved",
+      "next_action": "Desktop app must point to the new site address after publish"
+    }
   ]
 }
