@@ -149,12 +149,13 @@ export function runStateMachine(__session, __parsed, __itemPrices) {
   }
 
   var WEL_AR = 'الراعبي للتجارة' + '\n' + SEP + '\n' +
-    ' شركة الراعبي' + '\n' +
-    ' لأنظمة الطاقة وحلولها' + '\n' +
-    ' _ SUNTECH_' + '\n' +
-    ' _Li Power_' + '\n' +
-    ' _ PYLONTECH_' + '\n' +
-    ' _HTHIUM_' + '\n' +
+    ' شركة الراعبي للتجارة' + '\n' +
+    ' للطاقة الشمسية وشواحن السيارات الكهربائية' + '\n' +
+    ' _TRINA SOLAR_' + '\n' +
+    ' _DYNESS_' + '\n' +
+    ' _LUXPOWER_' + '\n' +
+    ' _SUNGROW_' + '\n' +
+    ' _GRASEN_' + '\n' +
     SEP + '\n' +
     ' أهلاً وسهلاً بكم' + '\n' +
     ' اختر لغتك من الأزرار التالية';
