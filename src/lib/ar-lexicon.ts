@@ -8,7 +8,7 @@ const TERMS: [RegExp, string][] = [
   // منع تكرار «بالريال بالريال»، وتوحيد العملة إلى «بالريال اليمني» دائماً
   [new RegExp(`(?:${RIYAL}\\s+)+(?=${RIYAL})`, "g"), ""],
   [new RegExp(`${RIYAL}(?!${D}\\s*${YEMENI})`, "g"), "بِالرِّيَالِ اليَمَنِيّ"],
-  [/\bACTES\b|الراعبي|اكتس/gi, "أَكْتِسْ"],
+  [/\bACTES\b|الراعبي|اكتس/gi, "الرَّاعِبِي"],
   [/دايا\s+(هايبرد\s+)?DEYE/gi, "دايا $1"],
   [/\bDEYE\b/gi, "دَايَا"],
   [/\bExcel\b|\bxlsx\b/gi, "إِكْسِل"],
@@ -138,7 +138,7 @@ export function prepareArabicSpeech(text: string): string {
       const L: Record<string, string> = { A: "إيه", B: "بي", C: "سي", D: "دي", E: "إي", F: "إف", G: "جي", H: "إتش", I: "آي", J: "جيه", K: "كيه", L: "إل", M: "إم", N: "إن", O: "أو", P: "بي", Q: "كيو", R: "آر", S: "إس", T: "تي", U: "يو", V: "في", W: "دبليو", X: "إكس", Y: "واي", Z: "زد" };
       const spelled = letters.toUpperCase().split("").map((c) => L[c] || c).join(" ");
       const nums = digits.split("").map((c) => ONES[Number(c)]).join(" ");
-      return `أَكْتِسْ ${spelled} ${nums} `;
+      return `الرَّاعِبِي ${spelled} ${nums} `;
     })
     .replace(/\bACTES\s*-\s*/gi, "Al-Raebi، ")
     .replace(/(\d)(?=[A-Za-z\u0621-\u064A])/g, "$1 ")

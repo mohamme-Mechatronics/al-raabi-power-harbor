@@ -1625,7 +1625,7 @@ export function runStateMachine(__session, __parsed, __itemPrices) {
         });
         var built = bigBuildItems(kw, nInv, panels, kwp, nBat, ac, dc);
         COM_QUOTES[code] = {
-          num: 'ACTES-' + kw + '-' + nInv + '-' + rowIdx + '-' + (b + 1),
+          num: 'RAEBI-' + kw + '-' + nInv + '-' + rowIdx + '-' + (b + 1),
           total: built.total, url: '', items: built.items
         };
         COM_IMG[code] = inv.img;
