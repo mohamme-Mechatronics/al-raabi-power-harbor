@@ -6,6 +6,7 @@
 - [x] Official product photos from manufacturer sites.
 - [x] Replace old brand pages with pages for the new brands.
 - [x] Rebrand all four home service-card images and replace the product collage with current products and manufacturer logos.
+- [x] Fit the app to laptop screens: home cards fill the height, top picture sized for laptops, downloads page rebuilt as a full page.
 - [ ] Switch quote tool to the new products: prices waiting on user.
 - [ ] Phase two: videos (user will provide/edit later).
 - [ ] Import existing orders/notifications: waiting for an export from the old project.
