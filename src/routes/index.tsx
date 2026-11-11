@@ -1442,7 +1442,7 @@ function HomeDashboard({ onService, onProducts }: { onService: (kind: "quote" | 
     setScreenSpeech("الشاشة الرئيسية لالراعبي. يمكنك طلب عرض سعر، أو استكشاف حلول أنظمة الطاقة، أو التواصل مع الدعم الفني، أو التعرف على منتجاتنا.");
   }, []);
   return (
-    <div className="screen-enter flex min-h-0 w-full flex-col gap-2 lg:h-full">
+    <div className="screen-enter flex min-h-full w-full flex-col gap-2 lg:h-full lg:min-h-0">
       <CorporateHero />
       <section data-photo-section className="min-h-0 shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm lg:min-h-0 lg:shrink lg:flex-1 lg:max-h-[30dvh]">
         <img src={homeHero} alt="الراعبي للتجارة" loading="eager" decoding="sync" fetchPriority="high" className="block h-14 w-full object-cover object-center sm:h-16 lg:h-full lg:w-full lg:aspect-auto" />
