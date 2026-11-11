@@ -130,9 +130,9 @@ import { AdminDashboard } from "@/components/admin-dashboard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Al-Raebi — حلول أنظمة الطاقة الشمسية" },
+      { title: "الراعبي للتجارة — أنظمة الطاقة الشمسية وشواحن السيارات" },
       { name: "description", content: "منصة الراعبي لتصميم منظومات الطاقة الشمسية وإعداد عروض الأسعار ودراسات الأداء والمخططات." },
-      { property: "og:title", content: "Al-Raebi — حلول أنظمة الطاقة الشمسية" },
+      { property: "og:title", content: "الراعبي للتجارة — أنظمة الطاقة الشمسية وشواحن السيارات" },
       { property: "og:description", content: "صمّم منظومتك واحصل على عرض سعر ودراسة أداء ومخطط واضح." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
