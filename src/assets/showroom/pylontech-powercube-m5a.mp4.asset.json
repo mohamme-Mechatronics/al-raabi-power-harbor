@@ -1,5 +1,11 @@
 {
+  "version": 1,
+  "asset_id": "183e29a0-a220-4256-98ad-013ed1377c3e",
+  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
   "url": "/__l5e/assets-v1/183e29a0-a220-4256-98ad-013ed1377c3e/pylontech-powercube-m5a.mp4",
+  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/183e29a0-a220-4256-98ad-013ed1377c3e/pylontech-powercube-m5a.mp4",
+  "original_filename": "pylontech-powercube-m5a.mp4",
+  "size": 7484854,
   "content_type": "video/mp4",
-  "size": 7484854
+  "created_at": "2026-11-11T14:26:18Z"
 }

@@ -1,5 +1,11 @@
 {
+  "version": 1,
+  "asset_id": "664790dc-c3eb-4054-b181-f96500adce4b",
+  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
   "url": "/__l5e/assets-v1/664790dc-c3eb-4054-b181-f96500adce4b/catalog-10.pdf",
+  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/664790dc-c3eb-4054-b181-f96500adce4b/catalog-10.pdf",
+  "original_filename": "catalog-10.pdf",
+  "size": 337071,
   "content_type": "application/pdf",
-  "size": 337071
+  "created_at": "2026-11-11T14:14:53Z"
 }
