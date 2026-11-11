@@ -5,6 +5,7 @@
 - [x] Replace product catalog with GRASEN, Trina, Huasun, Dyness, Luxpower, Sungrow, ATESS products.
 - [x] Official product photos from manufacturer sites.
 - [x] Replace old brand pages with pages for the new brands.
+- [x] Rebrand all four home service-card images and replace the product collage with current products and manufacturer logos.
 - [ ] Switch quote tool to the new products: prices waiting on user.
 - [ ] Phase two: videos (user will provide/edit later).
 - [ ] Import existing orders/notifications: waiting for an export from the old project.

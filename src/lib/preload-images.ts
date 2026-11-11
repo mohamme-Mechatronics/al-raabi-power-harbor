@@ -9,13 +9,13 @@ import industrialImageAsset from "@/assets/imported/src/assets/actes-industrial.
 const industrialImage = industrialImageAsset.url;
 import agricultureImageAsset from "@/assets/imported/src/assets/actes-agriculture.webp.asset.json";
 const agricultureImage = agricultureImageAsset.url;
-import cardQuoteAsset from "@/assets/imported/src/assets/card-quote.webp.asset.json";
+import cardQuoteAsset from "@/assets/brand/alraebi-card-quote.webp.asset.json";
 const cardQuote = cardQuoteAsset.url;
-import cardEnergyAsset from "@/assets/imported/src/assets/card-energy.webp.asset.json";
+import cardEnergyAsset from "@/assets/brand/alraebi-card-energy.webp.asset.json";
 const cardEnergy = cardEnergyAsset.url;
-import cardSupportAsset from "@/assets/imported/src/assets/card-support.webp.asset.json";
+import cardSupportAsset from "@/assets/brand/alraebi-card-support.webp.asset.json";
 const cardSupport = cardSupportAsset.url;
-import cardProductsAsset from "@/assets/imported/src/assets/card-products.webp.asset.json";
+import cardProductsAsset from "@/assets/brand/alraebi-card-products.webp.asset.json";
 const cardProducts = cardProductsAsset.url;
 import actesLogoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesLogo = actesLogoAsset.url;
