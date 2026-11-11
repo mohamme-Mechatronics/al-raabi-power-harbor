@@ -84,7 +84,7 @@ import industrialImageAsset from "@/assets/imported/src/assets/actes-industrial.
 const industrialImage = industrialImageAsset.url;
 import agricultureImageAsset from "@/assets/imported/src/assets/actes-agriculture.webp.asset.json";
 const agricultureImage = agricultureImageAsset.url;
-import homeHeroAsset from "@/assets/imported/src/assets/actes-home-hero.webp.asset.json";
+import homeHeroAsset from "@/assets/brand/alraebi-home-hero.webp.asset.json";
 const homeHero = homeHeroAsset.url;
 
 import refCardQuoteAsset from "@/assets/imported/src/assets/card-quote.webp.asset.json";
@@ -1470,9 +1470,9 @@ function HomeDashboard({ onService, onProducts }: { onService: (kind: "quote" | 
 
 function PartnersStrip() {
   return (
-    <section aria-label="العلامات التجارية لدى الراعبي" className="shrink-0 border-y border-border bg-card py-3">
-      <div className="grid grid-cols-4 items-center gap-4 px-3 sm:grid-cols-7">
-        {BRANDS.map((b) => <Link key={b.slug} to="/brands/$brand" params={{ brand: b.slug }} title={b.brand} className="flex h-10 items-center justify-center"><img src={b.logo} alt={b.brand} className="max-h-8 w-full max-w-28 object-contain" /></Link>)}
+    <section aria-label="العلامات التجارية لدى الراعبي" className="shrink-0 rounded-full border border-border bg-card px-3 py-1.5 shadow-sm">
+      <div dir="ltr" className="grid grid-cols-7 items-center gap-2 sm:gap-4">
+        {BRANDS.map((b) => <Link key={b.slug} to="/brands/$brand" params={{ brand: b.slug }} title={b.brand} className="flex h-7 min-w-0 items-center justify-center sm:h-9"><img src={b.logo} alt={b.brand} className="max-h-5 w-full max-w-28 object-contain sm:max-h-7" /></Link>)}
       </div>
     </section>
   );
