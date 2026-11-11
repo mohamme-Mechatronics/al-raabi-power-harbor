@@ -99,7 +99,7 @@ const wattClean = (name: string, w: number) => (new RegExp(`\\b${w}\\s*(w|wp|و�
 const kwhClean = (name: string, k: number) => (new RegExp(`\\b${k}\\s*(kwh|كيلو)`, "i").test(name) ? name : `${name} ${k}kWh`);
 
 const R = { red: "#e60012", ink: "#14171c", sub: "#6b7280", line: "#e5e7eb", paper: "#f7f8fa", mint: "#e8f5ee", green: "#15803d" };
-const LOGO = "/brand/actes-logo-report.png";
+const LOGO = "/brand/alraebi-logo-full.png";
 
 const Sec = ({ n, kicker, title, note, children }: { n: string; kicker: string; title: string; note?: string; children: React.ReactNode }) => (
   <section className="break-inside-avoid">

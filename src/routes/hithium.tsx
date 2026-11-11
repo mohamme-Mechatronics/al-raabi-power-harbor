@@ -2,7 +2,7 @@ import { AgencyBadge, AgencyShowcase } from "@/components/agency-showcase";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowRight, BatteryCharging, FileText, Flame, Gauge, Layers, ShieldCheck, Thermometer } from "lucide-react";
-import actesLogoAsset from "@/assets/imported/src/assets/actes-logo-full.webp.asset.json";
+import actesLogoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesLogo = actesLogoAsset.url;
 import { PRODUCTS, type Product } from "@/lib/products-data";
 import { BrandProductDetail } from "@/components/brand-product-detail";

@@ -1,6 +1,6 @@
 import type { SldModel } from "./sld-engine";
 import type { CableCalc } from "./sld-annotations";
-import logoAsset from "@/assets/actes-logo-sld.png.asset.json";
+import logoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 
 /**
  * يصدّر المخطط الأحادي كلوحة هندسية رسمية A4 عرضية:

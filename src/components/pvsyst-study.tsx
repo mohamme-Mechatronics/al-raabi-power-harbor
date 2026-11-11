@@ -25,7 +25,7 @@ import { AZIMUTH_OPTIONS } from "@/lib/pvsyst-geometry";
 import { buildEconomics, capexFromQuoteItems, DEFAULT_TARIFF_USD } from "@/lib/pvsyst-economics";
 import { downloadPvsystReport } from "@/lib/pvsyst-pdf";
 import type { View } from "@/lib/present";
-import actesLogoPlain from "@/assets/actes-logo-plain.png.asset.json";
+import actesLogoPlain from "@/assets/brand/alraebi-logo-full.png.asset.json";
 
 const nf = (n: number, d = 0) => n.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
 

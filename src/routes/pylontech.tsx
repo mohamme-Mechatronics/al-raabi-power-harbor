@@ -8,7 +8,7 @@ import { PYLON_SOLUTIONS } from "@/lib/pylontech-solutions";
 import { PylontechSolution } from "@/components/pylontech-solution";
 import { PylontechNav } from "@/components/pylontech-nav";
 import { useResolvedVideoSrc } from "@/lib/video-source";
-import actesLogoAsset from "@/assets/imported/src/assets/actes-logo-full.webp.asset.json";
+import actesLogoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesLogo = actesLogoAsset.url;
 import resBessAsset from "@/assets/imported/src/assets/pylon/residential-bess.webp.asset.json";
 const resBess = resBessAsset.url;

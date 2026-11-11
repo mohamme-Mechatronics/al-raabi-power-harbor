@@ -1,5 +1,5 @@
 import { BadgeCheck, FileText, Download, ShieldCheck, Wrench, ClipboardCheck, Headphones, Sun, Cpu, BatteryCharging, Home } from "lucide-react";
-import actesLogoAsset from "@/assets/imported/src/assets/actes-logo-full.webp.asset.json";
+import actesLogoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesLogo = actesLogoAsset.url;
 import { PRODUCTS } from "@/lib/products-data";
 

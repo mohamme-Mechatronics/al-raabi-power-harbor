@@ -28,7 +28,7 @@ function DownloadsPage() {
     >
       <div className="w-full max-w-xl bg-card border border-border rounded-3xl p-8 sm:p-10 shadow-lg">
         <div className="flex items-center gap-4 mb-6">
-          <img src="/brand/app-icon.png" alt="ACTES" className="w-16 h-16 rounded-2xl" />
+          <img src="/brand/alraebi-app-icon.png" alt="ACTES" className="w-16 h-16 rounded-2xl" />
           <div>
             <h1 className="text-2xl font-bold">تطبيق ACTES لويندوز</h1>
             <p className="text-sm text-muted-foreground mt-1">نسخة سطح المكتب — 64 بت</p>

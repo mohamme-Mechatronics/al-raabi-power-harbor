@@ -4,7 +4,7 @@ import { ArrowRight, ChevronDown, Download, Globe, Menu, Search, ShieldCheck, X 
 import type { Product } from "@/lib/products-data";
 import { officialCatalogUrl } from "@/lib/official-catalogs";
 import { PYLON_SOLUTIONS } from "@/lib/pylontech-solutions";
-import actesLogoAsset from "@/assets/imported/src/assets/actes-logo-full.webp.asset.json";
+import actesLogoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesLogo = actesLogoAsset.url;
 
 type Simple = { t: string; d?: string; h: string };

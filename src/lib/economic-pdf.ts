@@ -5,7 +5,7 @@ import {
   type EconomicsResult,
   type Scenario,
 } from "./pvsyst-economics";
-import actesLogoPlain from "@/assets/actes-logo-plain.png.asset.json";
+import actesLogoPlain from "@/assets/brand/alraebi-logo-full.png.asset.json";
 
 /**
  * تقرير دراسة الجدوى الاقتصادية والوفر البيئي — مستند رسمي مستقل بهوية ACTES

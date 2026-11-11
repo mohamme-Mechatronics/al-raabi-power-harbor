@@ -44,7 +44,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import logoAsset from "@/assets/actes-logo-sld.png.asset.json";
+import logoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 
 /**
  * ألوان الرسم الكهربائي القياسية (IEC): ليست ألوان واجهة بل دلالات هندسية

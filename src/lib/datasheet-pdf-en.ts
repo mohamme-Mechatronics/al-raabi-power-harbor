@@ -1,7 +1,7 @@
 // النسخة الإنجليزية من كتالوج الموديل (Model Datasheet — English) بهوية أكتس.
 // نفس بيانات المصنّع الواردة في products-data.ts، مترجمة عبر datasheet-en-dictionary.ts فقط.
 import type { Product } from "./products-data";
-import actesLogo from "@/assets/actes-logo.png.asset.json";
+import actesLogo from "@/assets/brand/alraebi-logo-full.png.asset.json";
 import {
   translateGroupTitle,
   translateSpecLabel,

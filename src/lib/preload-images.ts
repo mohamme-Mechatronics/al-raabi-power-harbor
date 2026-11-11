@@ -17,7 +17,7 @@ import cardSupportAsset from "@/assets/imported/src/assets/card-support.webp.ass
 const cardSupport = cardSupportAsset.url;
 import cardProductsAsset from "@/assets/imported/src/assets/card-products.webp.asset.json";
 const cardProducts = cardProductsAsset.url;
-import actesLogoAsset from "@/assets/imported/src/assets/actes-logo-full.webp.asset.json";
+import actesLogoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesLogo = actesLogoAsset.url;
 import homeHeroAsset from "@/assets/imported/src/assets/actes-home-hero.webp.asset.json";
 const homeHero = homeHeroAsset.url;

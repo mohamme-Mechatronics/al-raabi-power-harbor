@@ -1,9 +1,9 @@
 import { LoadPdfImport } from "@/components/load-pdf-import";
 import { useCorporateMode } from "@/lib/corporate-mode";
 import { createFileRoute } from "@tanstack/react-router";
-import actesLogoAsset from "@/assets/imported/src/assets/actes-logo-full.webp.asset.json";
+import actesLogoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesLogo = actesLogoAsset.url;
-import actesLogoWhiteAsset from "@/assets/imported/src/assets/actes-logo-white.webp.asset.json";
+import actesLogoWhiteAsset from "@/assets/brand/alraebi-logo-white.png.asset.json";
 const actesLogoWhite = actesLogoWhiteAsset.url;
 import { useLang, type Lang } from "@/lib/i18n";
 import { SoundToggle } from "@/lib/click-sound";
@@ -19,7 +19,7 @@ import { applyVariantToSldParams, applyVariantToStudyParams, buildVariants, type
 
 
 import { enterFullscreen, isFullscreen, toggleFullscreen } from "@/lib/fullscreen";
-import actesSplashLogoAsset from "@/assets/imported/src/assets/actes-logo-white.webp.asset.json";
+import actesSplashLogoAsset from "@/assets/brand/alraebi-logo-white.png.asset.json";
 const actesSplashLogo = actesSplashLogoAsset.url;
 import startBgMobileAsset from "@/assets/imported/src/assets/start-bg-mobile.webp.asset.json";
 const startBgMobile = startBgMobileAsset.url;
@@ -99,11 +99,11 @@ import refCardProductsAsset from "@/assets/imported/src/assets/card-products.web
 const refCardProducts = refCardProductsAsset.url;
 import ProductsCatalog from "@/components/products-catalog";
 
-import actesAvatarAsset from "@/assets/imported/src/assets/actes-a-mark.webp.asset.json";
+import actesAvatarAsset from "@/assets/brand/alraebi-mark.png.asset.json";
 const actesAvatar = actesAvatarAsset.url;
-import actesMarkAsset from "@/assets/imported/src/assets/actes-a-mark.webp.asset.json";
+import actesMarkAsset from "@/assets/brand/alraebi-mark.png.asset.json";
 const actesMark = actesMarkAsset.url;
-import actesWordmarkAsset from "@/assets/imported/src/assets/actes-logo-full.webp.asset.json";
+import actesWordmarkAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesWordmark = actesWordmarkAsset.url;
 
 import { findCatalogProductForSpec, type Product as CatalogProduct } from "@/lib/products-data";

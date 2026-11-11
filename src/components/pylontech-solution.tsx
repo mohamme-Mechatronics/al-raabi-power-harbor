@@ -5,7 +5,7 @@ import { CheckCircle2, Download, Link2, ShieldCheck, X } from "lucide-react";
 import type { Product } from "@/lib/products-data";
 import type { PylonSolution } from "@/lib/pylontech-solutions";
 import { officialCatalogUrl } from "@/lib/official-catalogs";
-import actesLogoAsset from "@/assets/imported/src/assets/actes-logo-full.webp.asset.json";
+import actesLogoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesLogo = actesLogoAsset.url;
 
 export function PylontechSolution({ s, products, onClose, onProduct }: { s: PylonSolution; products: Product[]; onClose: () => void; onProduct: (id: string) => void }) {
