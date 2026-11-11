@@ -844,7 +844,7 @@ function ActesApp() {
       <AppSidebar active={isHome ? "home" : "quote"} onNavigate={navFromMenu} onSettings={() => setSettingsOpen(true)} onExit={leaveApp} />
       <div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden lg:col-start-1 lg:row-start-1">
         <TopBar isAdmin={isAdmin} clientName={clientName} onExitAdmin={exitAdmin} onSettings={() => setSettingsOpen(true)} onExit={leaveApp} />
-         <main ref={mainRef} className={`mx-auto flex w-full min-h-0 flex-1 px-3 py-3 pb-24 sm:px-6 lg:px-8 lg:pb-4 xl:px-10 2xl:px-14 ${isHome && !catalog ? "overflow-hidden" : "overflow-y-auto"}`}>
+         <main ref={mainRef} className={`mx-auto flex w-full min-h-0 flex-1 px-3 py-3 pb-24 sm:px-6 lg:px-8 lg:pb-4 xl:px-10 2xl:px-14 ${isHome && !catalog ? "overflow-y-auto" : "overflow-y-auto"}`}>
           {busy && (
             // شريط تقدّم رفيع لا يحجب الشاشة ولا يقطع سلاسة الانتقال بين الخطوات
             <div role="status" aria-label="جارٍ تجهيز الخطوة التالية" className="thin-progress fixed inset-x-0 top-0 z-50 h-0.5 overflow-hidden bg-brand/15" />
@@ -1444,8 +1444,8 @@ function HomeDashboard({ onService, onProducts }: { onService: (kind: "quote" | 
   return (
     <div className="screen-enter flex min-h-0 w-full flex-col gap-2 lg:h-full">
       <CorporateHero />
-      <section data-photo-section className="min-h-0 shrink overflow-hidden rounded-2xl border border-border bg-card shadow-sm lg:flex-1 lg:max-h-[30dvh]">
-        <img src={homeHero} alt="الراعبي للتجارة" loading="eager" decoding="sync" fetchPriority="high" className="block aspect-[2064/416] w-full object-cover lg:h-full lg:w-full lg:aspect-auto" />
+      <section data-photo-section className="min-h-0 shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm lg:min-h-0 lg:shrink lg:flex-1 lg:max-h-[30dvh]">
+        <img src={homeHero} alt="الراعبي للتجارة" loading="eager" decoding="sync" fetchPriority="high" className="block h-14 w-full object-cover object-center sm:h-16 lg:h-full lg:w-full lg:aspect-auto" />
       </section>
 
 
