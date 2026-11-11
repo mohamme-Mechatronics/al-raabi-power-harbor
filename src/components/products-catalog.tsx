@@ -1,8 +1,8 @@
 import { lazy, Suspense, useEffect, useMemo, useState, type ReactNode } from "react";
 const PdfPages = lazy(() => import("@/components/pdf-pages"));
-import { ArrowRight, Search, BatteryCharging, Check, ChevronDown, Container, Copy, Download, Eye, FileText, Gauge, Info, Layers, Link2, ListChecks, MessageCircle, Play, Share2, Sparkles, Sun, Users, Wrench, X, Zap } from "lucide-react";
+import { ArrowRight, Search, BatteryCharging, Check, ChevronDown, Container, Copy, Download, Eye, FileText, Gauge, Info, PlugZap, Layers, Link2, ListChecks, MessageCircle, Play, Share2, Sparkles, Sun, Users, Wrench, X, Zap } from "lucide-react";
 import { createPortal } from "react-dom";
-import { CATEGORIES, findProduct, matchCompatibleProducts, productsByCategory, quickSpecs, type Product, type ProductCategory, type ProductFile } from "@/lib/products-data";
+import { BRANDS, CATEGORIES, findProduct, matchCompatibleProducts, productsByCategory, quickSpecs, type Product, type ProductCategory, type ProductFile } from "@/lib/products-data";
 import { isVoiceOn, isVoicePlatform, prepareSpeech, silenceNextScreen, speakScreen, speakScreenAfterCurrent, stopSpeaking } from "@/lib/voice-guide";
 import ProductVideoPlayer from "@/components/product-video";
 import { afterVideoNarration, getProductVideo, videoIntroNarration } from "@/lib/product-video";
@@ -11,16 +11,18 @@ import { officialCatalogUrl } from "@/lib/official-catalogs";
 
 // خدمة معلوماتية فقط — لا تحتوي أي زر بيع أو ربط بمسارات عروض الأسعار.
 const CAT_TONE: Record<ProductCategory, string> = {
+  "ev-chargers": "bg-navy text-primary-foreground",
   panels: "bg-brand text-brand-foreground",
-  inverters: "bg-skyline text-skyline-foreground",
   batteries: "bg-energy text-energy-foreground",
-  storage: "bg-navy text-white",
+  inverters: "bg-skyline text-skyline-foreground",
+  "grid-inverters": "bg-primary text-primary-foreground",
 };
 const CAT_BIG_ICON: Record<ProductCategory, ReactNode> = {
+  "ev-chargers": <PlugZap className="size-10 lg:size-12" />,
   panels: <Sun className="size-10 lg:size-12" />,
-  inverters: <Zap className="size-10 lg:size-12" />,
   batteries: <BatteryCharging className="size-10 lg:size-12" />,
-  storage: <Container className="size-10 lg:size-12" />,
+  inverters: <Zap className="size-10 lg:size-12" />,
+  "grid-inverters": <Container className="size-10 lg:size-12" />,
 };
 
 /**
@@ -70,16 +72,13 @@ function BackButton({ onClick, label }: { onClick: () => void; label: string }) 
 }
 
 /** صور المعاينة المختارة لكل فئة على بطاقات الأقسام (صور المنتجات الحقيقية). */
-const PREVIEW_IDS: Partial<Record<ProductCategory, string[]>> = {
-  batteries: ["pylontech-powercube-m1c", "hithium-heroee-maxpower-16", "pylontech-rv12100ch"],
-  inverters: ["deye-sun-3-6k-sg04lp1--3-6k-sm2", "solis-s6-eh2p-5-8k--5k", "lipower-2012emh"],
-};
+const PREVIEW_IDS: Partial<Record<ProductCategory, string[]>> = {};
 
 /** المستوى الأول: ثلاث بطاقات ضخمة للأقسام. */
 function CategoriesScreen({ onPick, onBack }: { onPick: (c: ProductCategory | "all") => void; onBack: () => void }) {
   useScreenVoice(
     "catalog-home",
-    "قسم منتجات الراعبي. اختر الفئة التي تريد استعراضها: الألواح الشمسية، أو الإنفرترات، أو بطاريات الليثيوم، أو أنظمة التخزين.",
+    "قسم منتجات الراعبي. اختر الفئة التي تريد استعراضها: شواحن السيارات الكهربائية، أو الألواح الشمسية، أو بطاريات الليثيوم، أو المحولات الهجينة، أو المحولات المرتبطة بالشبكة.",
   );
   return (
     <div className="screen-enter w-full space-y-5 pb-4">
@@ -92,7 +91,7 @@ function CategoriesScreen({ onPick, onBack }: { onPick: (c: ProductCategory | "a
         <BackButton onClick={onBack} label="الرئيسية" />
       </header>
 
-      <div className="stagger-in grid grid-cols-2 gap-2.5 md:grid-cols-4">
+      <div className="stagger-in grid grid-cols-2 gap-2.5 md:grid-cols-3 xl:grid-cols-5">
         {CATEGORIES.map((cat) => {
           const items = productsByCategory(cat.id);
           const previewIds = PREVIEW_IDS[cat.id];
@@ -144,9 +143,9 @@ function CategoriesScreen({ onPick, onBack }: { onPick: (c: ProductCategory | "a
   );
 }
 
-/** اسم الشركة المصنّعة الموحّد (يدمج صيغ HiTHIUM المختلفة). */
+/** اسم الشركة المصنّعة كما يظهر في الأقسام. */
 export function brandOf(p: Product) {
-  return /hithium/i.test(p.brand) ? "HiTHIUM" : p.brand;
+  return p.brand;
 }
 
 /** المستوى الثاني: أقسام الشركات المصنّعة، ثم موديلات الشركة المختارة. */
@@ -250,24 +249,12 @@ function AllProductsView({ onOpen, onBack }: { onOpen: (id: string) => void; onB
 }
 
 function brandLabel(b: string) {
-  if (/hithium|heroee/i.test(b)) return "HiTHIUM";
   return b;
 }
 
-// شعارات المصنّعين مستخرجة من الكتالوجات الرسمية في public/catalogs.
-const MAKER_LOGOS: Record<string, string> = {
-  Deye: "/brand/makers/deye.png",
-  Solis: "/brand/makers/solis.png",
-  "Li-Power": "/brand/makers/lipower.png",
-  Pylontech: "/brand/makers/pylontech.png",
-  HiTHIUM: "/brand/makers/hithium.png",
-  Suntech: "/brand/makers/suntech.png",
-};
-
+// شعارات المصنّعين الرسمية.
 function makerLogo(b: string) {
-  const l = brandLabel(b);
-  const k = Object.keys(MAKER_LOGOS).find((n) => n.toLowerCase().replace(/[^a-z]/g, "") === l.toLowerCase().replace(/[^a-z]/g, ""));
-  return k ? MAKER_LOGOS[k] : undefined;
+  return BRANDS.find((x) => x.brand === b)?.logo;
 }
 
 function BrandBadge({ brand, large = false }: { brand: string; large?: boolean }) {
@@ -327,22 +314,16 @@ function ProductCard({ product, onOpen }: { product: Product; onOpen: () => void
 }
 
 const CAT_EN: Record<ProductCategory, string> = {
+  "ev-chargers": "EV Charger",
   panels: "Solar Panel",
-  inverters: "Hybrid Inverter",
   batteries: "Lithium Battery",
-  storage: "Energy Storage",
+  inverters: "Hybrid Inverter",
+  "grid-inverters": "On-Grid Inverter",
 };
 
 /** اللون الرسمي لكل شركة لكبسولة القدرة. */
 function brandColor(b: string) {
-  const k = brandLabel(b).toLowerCase().replace(/[^a-z]/g, "");
-  if (k.includes("deye")) return "#0072ce";
-  if (k.includes("solis")) return "#f06e1e";
-  if (k.includes("lipower")) return "#e60045";
-  if (k.includes("pylontech")) return "#002b66";
-  if (k.includes("hithium")) return "#10b981";
-  if (k.includes("suntech")) return "#dc2626";
-  return "#1f2937";
+  return BRANDS.find((x) => x.brand === b)?.accent ?? "#1f2937";
 }
 
 function Section({ icon, title, children, defaultOpen = false }: { icon: ReactNode; title: string; children: ReactNode; defaultOpen?: boolean }) {

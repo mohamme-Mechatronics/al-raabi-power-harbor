@@ -22,13 +22,7 @@ const modelCode = (product: Product) =>
   translateSpecValue(product.model.replace(/\s*\([^)]*\)\s*/g, " ").trim());
 
 const categoryLabelEn = (product: Product) =>
-  product.category === "panels"
-    ? "Solar Panels"
-    : product.category === "batteries"
-      ? "Batteries"
-      : product.category === "storage"
-        ? "Energy Storage Systems"
-        : "Inverters";
+  ({ "ev-chargers": "EV Chargers", panels: "Solar Panels", batteries: "Lithium Batteries", inverters: "Hybrid Inverters", "grid-inverters": "On-Grid Inverters" } as const)[product.category];
 
 export function datasheetFileNameEn(product: Product): string {
   const model = modelCode(product).replace(/[^A-Za-z0-9.\-]+/g, "-").replace(/(^-|-$)/g, "");

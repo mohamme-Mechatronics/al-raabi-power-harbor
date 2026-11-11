@@ -18,8 +18,7 @@ const abs = (u: string) => {
  *  يشمل الألواح الشمسية والبطاريات (مواصفات كل موديل مستقلة)،
  *  والموديلات المنبثقة (Deye/Solis) والإنفرترات ذات القدرة المفردة (Li-Power). */
 export function hasModelDatasheet(product: Product): boolean {
-  if (product.category === "panels" || product.category === "batteries" || product.category === "storage") return true;
-  if (product.category !== "inverters") return false;
+  if (product.category !== "inverters" && product.category !== "grid-inverters") return true;
   if (product.baseId) return true;
   // قدرة مفردة بلا نطاق مثل «6.2 kW»
   return !/[–—-]|إلى/.test(product.power);
@@ -30,13 +29,7 @@ const modelCode = (product: Product) => product.model.replace(/\s*\([^)]*\)\s*/g
 
 /** اسم تصنيف المنتج كما يظهر في بطاقة الكتالوج. */
 const categoryLabel = (product: Product) =>
-  product.category === "panels"
-    ? "الألواح الشمسية"
-    : product.category === "batteries"
-      ? "البطاريات"
-      : product.category === "storage"
-        ? "أنظمة التخزين"
-        : "الإنفرترات";
+  ({ "ev-chargers": "شواحن السيارات الكهربائية", panels: "الألواح الشمسية", batteries: "بطاريات الليثيوم", inverters: "المحولات الهجينة", "grid-inverters": "المحولات المرتبطة بالشبكة" } as const)[product.category];
 
 /** اسم الملف المقترح عند الحفظ كـ PDF. */
 export function datasheetFileName(product: Product): string {
