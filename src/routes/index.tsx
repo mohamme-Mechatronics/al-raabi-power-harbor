@@ -1,6 +1,6 @@
 import { LoadPdfImport } from "@/components/load-pdf-import";
 import { useCorporateMode } from "@/lib/corporate-mode";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import actesLogoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesLogo = actesLogoAsset.url;
 import actesLogoWhiteAsset from "@/assets/brand/alraebi-logo-white.png.asset.json";

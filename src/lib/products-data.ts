@@ -3203,7 +3203,8 @@ export function findCatalogProductByText(text: string, category?: ProductCategor
   if (!category || category === "panels") {
     const watt = text.match(/(\d{3})\s*(?:وات|واط|W\b)/i);
     if (watt?.[1]) {
-      const panel = PRODUCTS.find((p) => p.category === "panels" && p.power.includes(watt[1]!));
+      const rating = watt[1];
+      const panel = PRODUCTS.find((p) => p.category === "panels" && p.power.includes(rating));
       if (panel) return panel;
     }
   }
