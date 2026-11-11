@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "17a1e10f-6fbe-4482-88bf-b0a77d6d444c",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/17a1e10f-6fbe-4482-88bf-b0a77d6d444c/solis-s6-eh3p-12-20k-h--20k.pdf",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/17a1e10f-6fbe-4482-88bf-b0a77d6d444c/solis-s6-eh3p-12-20k-h--20k.pdf",
-  "original_filename": "solis-s6-eh3p-12-20k-h--20k.pdf",
-  "size": 1029994,
   "content_type": "application/pdf",
-  "created_at": "2026-11-11T14:17:01Z"
+  "created_at": "2026-11-11T14:17:01Z",
+  "original_filename": "solis-s6-eh3p-12-20k-h--20k.pdf",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/17a1e10f-6fbe-4482-88bf-b0a77d6d444c/solis-s6-eh3p-12-20k-h--20k.pdf",
+  "size": 1029994,
+  "url": "/__l5e/assets-v1/17a1e10f-6fbe-4482-88bf-b0a77d6d444c/solis-s6-eh3p-12-20k-h--20k.pdf",
+  "version": 1
 }

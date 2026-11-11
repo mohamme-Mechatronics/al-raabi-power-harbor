@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "bc81a94f-7b05-40f5-a0f1-2f04eb97cafc",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/bc81a94f-7b05-40f5-a0f1-2f04eb97cafc/actes-112kwh-heroee.webp",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/bc81a94f-7b05-40f5-a0f1-2f04eb97cafc/actes-112kwh-heroee.webp",
-  "original_filename": "actes-112kwh-heroee.webp",
-  "size": 72138,
   "content_type": "image/webp",
-  "created_at": "2026-11-11T14:23:15Z"
+  "created_at": "2026-11-11T14:23:15Z",
+  "original_filename": "actes-112kwh-heroee.webp",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/bc81a94f-7b05-40f5-a0f1-2f04eb97cafc/actes-112kwh-heroee.webp",
+  "size": 72138,
+  "url": "/__l5e/assets-v1/bc81a94f-7b05-40f5-a0f1-2f04eb97cafc/actes-112kwh-heroee.webp",
+  "version": 1
 }

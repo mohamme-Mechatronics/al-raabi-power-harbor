@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "45744ee5-03f1-4259-961d-efe4b63eac9b",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/45744ee5-03f1-4259-961d-efe4b63eac9b/pylontech-rv12100ch.webp",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/45744ee5-03f1-4259-961d-efe4b63eac9b/pylontech-rv12100ch.webp",
-  "original_filename": "pylontech-rv12100ch.webp",
-  "size": 91088,
   "content_type": "image/webp",
-  "created_at": "2026-11-11T14:29:10Z"
+  "created_at": "2026-11-11T14:29:10Z",
+  "original_filename": "pylontech-rv12100ch.webp",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/45744ee5-03f1-4259-961d-efe4b63eac9b/pylontech-rv12100ch.webp",
+  "size": 91088,
+  "url": "/__l5e/assets-v1/45744ee5-03f1-4259-961d-efe4b63eac9b/pylontech-rv12100ch.webp",
+  "version": 1
 }

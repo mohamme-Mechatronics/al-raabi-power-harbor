@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "b77be806-4c85-40e2-b609-d61419c146f5",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/b77be806-4c85-40e2-b609-d61419c146f5/pylontech-uf5000.pdf",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/b77be806-4c85-40e2-b609-d61419c146f5/pylontech-uf5000.pdf",
-  "original_filename": "pylontech-uf5000.pdf",
-  "size": 479168,
   "content_type": "application/pdf",
-  "created_at": "2026-11-11T14:16:37Z"
+  "created_at": "2026-11-11T14:16:37Z",
+  "original_filename": "pylontech-uf5000.pdf",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/b77be806-4c85-40e2-b609-d61419c146f5/pylontech-uf5000.pdf",
+  "size": 479168,
+  "url": "/__l5e/assets-v1/b77be806-4c85-40e2-b609-d61419c146f5/pylontech-uf5000.pdf",
+  "version": 1
 }

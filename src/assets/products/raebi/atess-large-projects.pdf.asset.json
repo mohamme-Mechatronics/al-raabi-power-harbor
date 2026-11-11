@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "73da81d9-87ed-4a58-94c7-ad7f66ffdf4c",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/73da81d9-87ed-4a58-94c7-ad7f66ffdf4c/atess-large-projects.pdf",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/73da81d9-87ed-4a58-94c7-ad7f66ffdf4c/atess-large-projects.pdf",
-  "original_filename": "atess-large-projects.pdf",
-  "size": 286705,
   "content_type": "application/pdf",
-  "created_at": "2026-11-11T14:55:05Z"
+  "created_at": "2026-11-11T14:55:05Z",
+  "original_filename": "atess-large-projects.pdf",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/73da81d9-87ed-4a58-94c7-ad7f66ffdf4c/atess-large-projects.pdf",
+  "size": 286705,
+  "url": "/__l5e/assets-v1/73da81d9-87ed-4a58-94c7-ad7f66ffdf4c/atess-large-projects.pdf",
+  "version": 1
 }

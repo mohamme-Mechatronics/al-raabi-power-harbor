@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "b0b59ee5-f478-4fb9-878d-961803769d20",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/b0b59ee5-f478-4fb9-878d-961803769d20/logo-luxpower.png",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/b0b59ee5-f478-4fb9-878d-961803769d20/logo-luxpower.png",
-  "original_filename": "logo-luxpower.png",
-  "size": 43165,
   "content_type": "image/png",
-  "created_at": "2026-11-11T14:55:52Z"
+  "created_at": "2026-11-11T14:55:52Z",
+  "original_filename": "logo-luxpower.png",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/b0b59ee5-f478-4fb9-878d-961803769d20/logo-luxpower.png",
+  "size": 43165,
+  "url": "/__l5e/assets-v1/b0b59ee5-f478-4fb9-878d-961803769d20/logo-luxpower.png",
+  "version": 1
 }

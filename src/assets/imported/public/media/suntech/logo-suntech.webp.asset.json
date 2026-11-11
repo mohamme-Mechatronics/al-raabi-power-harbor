@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "27340646-689d-4311-8079-ce28e829ed52",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/27340646-689d-4311-8079-ce28e829ed52/logo-suntech.webp",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/27340646-689d-4311-8079-ce28e829ed52/logo-suntech.webp",
-  "original_filename": "logo-suntech.webp",
-  "size": 10686,
   "content_type": "image/webp",
-  "created_at": "2026-11-11T14:25:15Z"
+  "created_at": "2026-11-11T14:25:15Z",
+  "original_filename": "logo-suntech.webp",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/27340646-689d-4311-8079-ce28e829ed52/logo-suntech.webp",
+  "size": 10686,
+  "url": "/__l5e/assets-v1/27340646-689d-4311-8079-ce28e829ed52/logo-suntech.webp",
+  "version": 1
 }

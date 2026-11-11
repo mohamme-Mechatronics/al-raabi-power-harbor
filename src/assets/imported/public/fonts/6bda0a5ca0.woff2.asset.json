@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "2a4c2937-a140-4d96-94f1-b68a756b1fd9",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/2a4c2937-a140-4d96-94f1-b68a756b1fd9/6bda0a5ca0.woff2",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/2a4c2937-a140-4d96-94f1-b68a756b1fd9/6bda0a5ca0.woff2",
-  "original_filename": "6bda0a5ca0.woff2",
-  "size": 8940,
   "content_type": "font/woff2",
-  "created_at": "2026-11-11T14:22:38Z"
+  "created_at": "2026-11-11T14:22:38Z",
+  "original_filename": "6bda0a5ca0.woff2",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/2a4c2937-a140-4d96-94f1-b68a756b1fd9/6bda0a5ca0.woff2",
+  "size": 8940,
+  "url": "/__l5e/assets-v1/2a4c2937-a140-4d96-94f1-b68a756b1fd9/6bda0a5ca0.woff2",
+  "version": 1
 }

@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "218a5570-d2f0-4eb8-9eac-7c59c465ce7f",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/218a5570-d2f0-4eb8-9eac-7c59c465ce7f/actes-message-header.jpg",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/218a5570-d2f0-4eb8-9eac-7c59c465ce7f/actes-message-header.jpg",
-  "original_filename": "actes-message-header.jpg",
-  "size": 78965,
   "content_type": "image/jpeg",
-  "created_at": "2026-11-11T14:14:40Z"
+  "created_at": "2026-11-11T14:14:40Z",
+  "original_filename": "actes-message-header.jpg",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/218a5570-d2f0-4eb8-9eac-7c59c465ce7f/actes-message-header.jpg",
+  "size": 78965,
+  "url": "/__l5e/assets-v1/218a5570-d2f0-4eb8-9eac-7c59c465ce7f/actes-message-header.jpg",
+  "version": 1
 }

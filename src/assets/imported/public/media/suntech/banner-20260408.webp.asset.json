@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "e510a0b4-adbb-435a-88a4-4849c4f47416",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/e510a0b4-adbb-435a-88a4-4849c4f47416/banner-20260408.webp",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/e510a0b4-adbb-435a-88a4-4849c4f47416/banner-20260408.webp",
-  "original_filename": "banner-20260408.webp",
-  "size": 338852,
   "content_type": "image/webp",
-  "created_at": "2026-11-11T14:25:16Z"
+  "created_at": "2026-11-11T14:25:16Z",
+  "original_filename": "banner-20260408.webp",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/e510a0b4-adbb-435a-88a4-4849c4f47416/banner-20260408.webp",
+  "size": 338852,
+  "url": "/__l5e/assets-v1/e510a0b4-adbb-435a-88a4-4849c4f47416/banner-20260408.webp",
+  "version": 1
 }

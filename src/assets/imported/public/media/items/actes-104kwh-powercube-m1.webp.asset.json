@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "889b910b-8879-45a1-9c41-ed1770eaded6",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/889b910b-8879-45a1-9c41-ed1770eaded6/actes-104kwh-powercube-m1.webp",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/889b910b-8879-45a1-9c41-ed1770eaded6/actes-104kwh-powercube-m1.webp",
-  "original_filename": "actes-104kwh-powercube-m1.webp",
-  "size": 83800,
   "content_type": "image/webp",
-  "created_at": "2026-11-11T14:23:16Z"
+  "created_at": "2026-11-11T14:23:16Z",
+  "original_filename": "actes-104kwh-powercube-m1.webp",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/889b910b-8879-45a1-9c41-ed1770eaded6/actes-104kwh-powercube-m1.webp",
+  "size": 83800,
+  "url": "/__l5e/assets-v1/889b910b-8879-45a1-9c41-ed1770eaded6/actes-104kwh-powercube-m1.webp",
+  "version": 1
 }

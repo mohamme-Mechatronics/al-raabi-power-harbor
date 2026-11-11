@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "23152363-7f1c-405b-93a6-c0fad9f07363",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/23152363-7f1c-405b-93a6-c0fad9f07363/deye-sun-29-9-50k-sg01hp3--50k.pdf",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/23152363-7f1c-405b-93a6-c0fad9f07363/deye-sun-29-9-50k-sg01hp3--50k.pdf",
-  "original_filename": "deye-sun-29-9-50k-sg01hp3--50k.pdf",
-  "size": 564523,
   "content_type": "application/pdf",
-  "created_at": "2026-11-11T14:16:13Z"
+  "created_at": "2026-11-11T14:16:13Z",
+  "original_filename": "deye-sun-29-9-50k-sg01hp3--50k.pdf",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/23152363-7f1c-405b-93a6-c0fad9f07363/deye-sun-29-9-50k-sg01hp3--50k.pdf",
+  "size": 564523,
+  "url": "/__l5e/assets-v1/23152363-7f1c-405b-93a6-c0fad9f07363/deye-sun-29-9-50k-sg01hp3--50k.pdf",
+  "version": 1
 }

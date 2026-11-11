@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "add11b57-d53f-4a78-8d14-48a16dfe52b8",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/add11b57-d53f-4a78-8d14-48a16dfe52b8/catalog-9.pdf",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/add11b57-d53f-4a78-8d14-48a16dfe52b8/catalog-9.pdf",
-  "original_filename": "catalog-9.pdf",
-  "size": 593589,
   "content_type": "application/pdf",
-  "created_at": "2026-11-11T14:15:34Z"
+  "created_at": "2026-11-11T14:15:34Z",
+  "original_filename": "catalog-9.pdf",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/add11b57-d53f-4a78-8d14-48a16dfe52b8/catalog-9.pdf",
+  "size": 593589,
+  "url": "/__l5e/assets-v1/add11b57-d53f-4a78-8d14-48a16dfe52b8/catalog-9.pdf",
+  "version": 1
 }

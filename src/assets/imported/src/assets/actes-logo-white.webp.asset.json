@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "ded53558-5bb6-4fea-b425-7dd818d283b5",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/ded53558-5bb6-4fea-b425-7dd818d283b5/actes-logo-white.webp",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/ded53558-5bb6-4fea-b425-7dd818d283b5/actes-logo-white.webp",
-  "original_filename": "actes-logo-white.webp",
-  "size": 24670,
   "content_type": "image/webp",
-  "created_at": "2026-11-11T14:27:02Z"
+  "created_at": "2026-11-11T14:27:02Z",
+  "original_filename": "actes-logo-white.webp",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/ded53558-5bb6-4fea-b425-7dd818d283b5/actes-logo-white.webp",
+  "size": 24670,
+  "url": "/__l5e/assets-v1/ded53558-5bb6-4fea-b425-7dd818d283b5/actes-logo-white.webp",
+  "version": 1
 }

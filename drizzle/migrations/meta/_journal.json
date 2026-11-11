@@ -1,13 +1,5 @@
 {
   "version": "7",
   "dialect": "postgresql",
-  "entries": [
-    {
-      "idx": 0,
-      "version": "7",
-      "when": 1794406628874,
-      "tag": "0000_import_actes_order_store",
-      "breakpoints": true
-    }
-  ]
+  "entries": []
 }

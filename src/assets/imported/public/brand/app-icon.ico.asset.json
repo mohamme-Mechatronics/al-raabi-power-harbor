@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "789760d9-5fa3-4cef-a155-0b7dfa0afa45",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/789760d9-5fa3-4cef-a155-0b7dfa0afa45/app-icon.ico",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/789760d9-5fa3-4cef-a155-0b7dfa0afa45/app-icon.ico",
-  "original_filename": "app-icon.ico",
-  "size": 143443,
   "content_type": "image/x-icon",
-  "created_at": "2026-11-11T14:14:40Z"
+  "created_at": "2026-11-11T14:14:40Z",
+  "original_filename": "app-icon.ico",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/789760d9-5fa3-4cef-a155-0b7dfa0afa45/app-icon.ico",
+  "size": 143443,
+  "url": "/__l5e/assets-v1/789760d9-5fa3-4cef-a155-0b7dfa0afa45/app-icon.ico",
+  "version": 1
 }

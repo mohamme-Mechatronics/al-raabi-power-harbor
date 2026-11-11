@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "1eefbce0-d8f5-465d-8e41-cc6eff7bbc66",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/1eefbce0-d8f5-465d-8e41-cc6eff7bbc66/grasen-dc-30-40kw.jpg",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/1eefbce0-d8f5-465d-8e41-cc6eff7bbc66/grasen-dc-30-40kw.jpg",
-  "original_filename": "grasen-dc-30-40kw.jpg",
-  "size": 654922,
   "content_type": "image/jpeg",
-  "created_at": "2026-11-11T14:53:36Z"
+  "created_at": "2026-11-11T14:53:36Z",
+  "original_filename": "grasen-dc-30-40kw.jpg",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/1eefbce0-d8f5-465d-8e41-cc6eff7bbc66/grasen-dc-30-40kw.jpg",
+  "size": 654922,
+  "url": "/__l5e/assets-v1/1eefbce0-d8f5-465d-8e41-cc6eff7bbc66/grasen-dc-30-40kw.jpg",
+  "version": 1
 }

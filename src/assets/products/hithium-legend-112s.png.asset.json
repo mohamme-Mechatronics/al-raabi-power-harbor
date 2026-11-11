@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "c3de38f2-74bb-42c5-a333-99e2b80e582a",
-  "project_id": "f03c6673-a4b6-4565-add6-604f0af8c619",
-  "url": "/__l5e/assets-v1/c3de38f2-74bb-42c5-a333-99e2b80e582a/hithium-legend-112s.webp",
-  "r2_key": "a/v1/f03c6673-a4b6-4565-add6-604f0af8c619/c3de38f2-74bb-42c5-a333-99e2b80e582a/hithium-legend-112s.webp",
-  "original_filename": "hithium-legend-112s.webp",
-  "size": 61418,
   "content_type": "image/jpeg",
-  "created_at": "2026-11-11T14:22:51Z"
+  "created_at": "2026-11-11T14:22:51Z",
+  "original_filename": "hithium-legend-112s.webp",
+  "project_id": "c09f25df-e45a-433f-bd77-85daf4fb69a0",
+  "r2_key": "a/v1/c09f25df-e45a-433f-bd77-85daf4fb69a0/c3de38f2-74bb-42c5-a333-99e2b80e582a/hithium-legend-112s.webp",
+  "size": 61418,
+  "url": "/__l5e/assets-v1/c3de38f2-74bb-42c5-a333-99e2b80e582a/hithium-legend-112s.webp",
+  "version": 1
 }
