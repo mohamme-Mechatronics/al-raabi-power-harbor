@@ -11,7 +11,10 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import { LanguageRuntime } from "@/lib/i18n";
+import { ClickSoundRuntime } from "@/lib/click-sound";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { startOffline } from "@/lib/offline";
 
 function NotFoundComponent() {
   return (
@@ -55,7 +58,7 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
           <button
             onClick={() => {
               router.invalidate();
-              reset();
+              reset?.();
             }}
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
@@ -75,27 +78,32 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-    // Replace these placeholders with the app's name and description when first building the app.
-    // Each content route, / included, must still set its own head(). Never add og:image or
-    // twitter:image here: every page without its own would inherit the root's preview image.
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "ACTES — حلول الطاقة" },
+      { name: "description", content: "منصة أكتس لحلول أنظمة الطاقة الشمسية." },
+      { name: "author", content: "ACTES" },
+      { property: "og:title", content: "ACTES — حلول الطاقة" },
+      { property: "og:description", content: "منصة أكتس لحلول أنظمة الطاقة الشمسية." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "theme-color", content: "#e30613" },
+      { name: "apple-mobile-web-app-capable", content: "yes" },
+      { name: "mobile-web-app-capable", content: "yes" },
+      { name: "apple-mobile-web-app-title", content: "ACTES" },
+      { name: "apple-mobile-web-app-status-bar-style", content: "default" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      // الخطوط مضمّنة داخل التطبيق حتى يعمل بالكامل دون إنترنت.
+      { rel: "stylesheet", href: "/fonts/fonts.css" },
+      { rel: "icon", href: "/__l5e/assets-v1/b94af02a-562f-434b-86ff-d728dc9f5b8e/favicon.png", type: "image/png" },
+      { rel: "manifest", href: "/manifest.webmanifest" },
+      { rel: "apple-touch-icon", href: "/__l5e/assets-v1/581555c3-0c6f-4d05-8ff5-4945cbe9e338/apple-touch-icon.png" },
     ],
   }),
   shellComponent: RootShell,
@@ -106,7 +114,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="ar" dir="rtl">
       <head>
         <HeadContent />
       </head>
@@ -120,11 +128,14 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  useEffect(() => { void startOffline().catch(() => {}); }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <LanguageRuntime />
+      <ClickSoundRuntime />
     </QueryClientProvider>
   );
 }
