@@ -1,10 +1,10 @@
 # Al-Raebi rebrand
 - [x] Update ADMIN_PASSWORD through the secure form.
 - [x] Reconcile copied migrations with the new database's empty baseline.
-- [ ] Replace ACTES name and logo with Al-Raebi For Trading everywhere (site, icons, PDFs, voice texts).
-- [ ] Replace product catalog with GRASEN, Trina, Huasun, Dyness, Luxpower, Sungrow, ATESS products.
-- [ ] Official product photos from manufacturer sites.
-- [ ] Replace old brand pages with pages for the new brands.
+- [x] Replace site, icon, report and voice branding with Al-Raebi (old video/download binaries untouched).
+- [x] Replace product catalog with GRASEN, Trina, Huasun, Dyness, Luxpower, Sungrow, ATESS products.
+- [x] Official product photos from manufacturer sites.
+- [x] Replace old brand pages with pages for the new brands.
 - [ ] Switch quote tool to the new products: prices waiting on user.
 - [ ] Phase two: videos (user will provide/edit later).
 - [ ] Import existing orders/notifications: waiting for an export from the old project.
