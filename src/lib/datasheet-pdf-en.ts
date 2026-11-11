@@ -1,4 +1,4 @@
-// النسخة الإنجليزية من كتالوج الموديل (Model Datasheet — English) بهوية أكتس.
+// النسخة الإنجليزية من كتالوج الموديل (Model Datasheet — English) بهوية الراعبي.
 // نفس بيانات المصنّع الواردة في products-data.ts، مترجمة عبر datasheet-en-dictionary.ts فقط.
 import type { Product } from "./products-data";
 import actesLogo from "@/assets/brand/alraebi-logo-full.png.asset.json";
@@ -32,7 +32,7 @@ const categoryLabelEn = (product: Product) =>
 
 export function datasheetFileNameEn(product: Product): string {
   const model = modelCode(product).replace(/[^A-Za-z0-9.\-]+/g, "-").replace(/(^-|-$)/g, "");
-  return `ACTES-Datasheet-EN-${model}.pdf`;
+  return `RAEBI-Datasheet-EN-${model}.pdf`;
 }
 
 function specTablesEn(product: Product): string {
@@ -101,7 +101,7 @@ export function buildDatasheetHtmlEn(product: Product, autoPrint = false): strin
 
 <div class="sheet">
   <div class="hd">
-    <img src="${logo}" alt="ACTES"/>
+    <img src="${logo}" alt="Al-Raebi"/>
     <div class="r">
       <div class="brand">${esc(product.brand)}</div>
       <div class="model">${esc(modelCode(product))}</div>
@@ -127,7 +127,7 @@ export function buildDatasheetHtmlEn(product: Product, autoPrint = false): strin
 
   <p class="note">All values above apply to model ${esc(modelCode(product))} rated ${esc(powerEn)} only, as published in the manufacturer's official datasheet. This document is for technical and informational purposes only.</p>
   <div class="ft">
-    <span><b>ACTES Energy Systems &amp; Solutions</b> — Technical Support &amp; Engineering Consultancy</span>
+    <span><b>Al-Raebi Energy Systems &amp; Solutions</b> — Technical Support &amp; Engineering Consultancy</span>
     <span>${esc(today)}</span>
   </div>
 </div>

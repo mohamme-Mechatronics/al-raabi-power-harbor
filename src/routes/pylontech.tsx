@@ -17,8 +17,8 @@ import { BUSINESS_EMAIL, BUSINESS_PHONE, BUSINESS_WHATSAPP } from "@/lib/contact
 export const Route = createFileRoute("/pylontech")({
   head: () => ({
     meta: [
-      { title: "بايلونتك العالمية — أنظمة تخزين الطاقة بالبطاريات | ACTES" },
-      { name: "description", content: "بايلونتك: المورّد الرائد عالمياً لأنظمة تخزين الطاقة بالبطاريات للمنازل والمرافق والقطاع التجاري والصناعي — بالعربية عبر ACTES." },
+      { title: "بايلونتك العالمية — أنظمة تخزين الطاقة بالبطاريات | Al-Raebi" },
+      { name: "description", content: "بايلونتك: المورّد الرائد عالمياً لأنظمة تخزين الطاقة بالبطاريات للمنازل والمرافق والقطاع التجاري والصناعي — بالعربية عبر Al-Raebi." },
       { property: "og:title", content: "بايلونتك العالمية — حرّر طاقتك بشكل مستدام" },
       { property: "og:description", content: "أنظمة تخزين الطاقة من بايلونتك للمنازل والمشاريع التجارية والصناعية والمرافق." },
       { property: "og:type", content: "website" },
@@ -61,7 +61,7 @@ const FOOTER = [
   { t: "الخدمة والدعم", l: ["كن شريكاً لنا", "مركز الخدمة", "تسجيل البطارية", "التحميلات"] },
   { t: "من نحن", l: ["نبذة عن الشركة", "ثقافة الشركة", "البحث والتطوير", "التصنيع", "الاستدامة"] },
   { t: "المركز الإعلامي", l: ["الأخبار", "المعارض", "الندوات الإلكترونية", "أخبار Voltdeer"] },
-  { t: "اتصل بنا", l: ["تواصل معنا", "انضم إلينا", `المبيعات: ${BUSINESS_PHONE}`, `الخدمة: ${BUSINESS_EMAIL}`, "ACTES — الوكيل المعتمد"] },
+  { t: "اتصل بنا", l: ["تواصل معنا", "انضم إلينا", `المبيعات: ${BUSINESS_PHONE}`, `الخدمة: ${BUSINESS_EMAIL}`, "Al-Raebi — الوكيل المعتمد"] },
 ];
 
 function PylontechPage() {
@@ -116,7 +116,7 @@ function PylontechPage() {
       <section id="solutions" className="scroll-mt-16 bg-muted/50 py-20">
         <div className="mx-auto max-w-7xl px-5">
           <h2 className="text-center text-3xl font-bold sm:text-4xl">المنتجات والحلول</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">حلول بايلونتك المتوفرة لدى أكتس — اضغط على أي حل لعرض منتجاته والتكامل الهندسي والكتالوجات</p>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-muted-foreground">حلول بايلونتك المتوفرة لدى الراعبي — اضغط على أي حل لعرض منتجاته والتكامل الهندسي والكتالوجات</p>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {PYLON_SOLUTIONS.map((x) => (
               <button key={x.id} onClick={() => setSol(x.id)} className="group relative block h-[340px] overflow-hidden rounded-2xl text-right">
@@ -198,8 +198,8 @@ function PylontechPage() {
         <div className="border-t border-background/15">
           <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-6 text-sm opacity-80">
             <div className="flex items-center gap-3">
-              <span className="rounded-lg bg-background p-1.5"><img src={actesLogo} alt="ACTES" className="h-8 w-auto" /></span>
-              <span>ACTES — الوكيل المعتمد لمنتجات بايلونتك</span>
+              <span className="rounded-lg bg-background p-1.5"><img src={actesLogo} alt="Al-Raebi" className="h-8 w-auto" /></span>
+              <span>Al-Raebi — الوكيل المعتمد لمنتجات بايلونتك</span>
             </div>
             <span>© Pylon Technologies Co., Ltd.</span>
           </div>

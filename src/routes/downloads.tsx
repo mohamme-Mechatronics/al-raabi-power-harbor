@@ -3,12 +3,12 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/downloads")({
   head: () => ({
     meta: [
-      { title: "تحميل تطبيق ACTES لويندوز" },
+      { title: "تحميل تطبيق Al-Raebi لويندوز" },
       {
         name: "description",
-        content: "تحميل تطبيق ACTES Desktop الخفيف لنظام ويندوز — أقل من 2 ميغابايت.",
+        content: "تحميل تطبيق Al-Raebi Desktop الخفيف لنظام ويندوز — أقل من 2 ميغابايت.",
       },
-      { property: "og:title", content: "تحميل تطبيق ACTES لويندوز" },
+      { property: "og:title", content: "تحميل تطبيق Al-Raebi لويندوز" },
       {
         property: "og:description",
         content: "تطبيق سطح مكتب خفيف لويندوز 10 و11 بحجم أقل من 2 ميغابايت.",
@@ -28,9 +28,9 @@ function DownloadsPage() {
     >
       <div className="w-full max-w-xl bg-card border border-border rounded-3xl p-8 sm:p-10 shadow-lg">
         <div className="flex items-center gap-4 mb-6">
-          <img src="/brand/alraebi-app-icon.png" alt="ACTES" className="w-16 h-16 rounded-2xl" />
+          <img src="/brand/alraebi-app-icon.png" alt="Al-Raebi" className="w-16 h-16 rounded-2xl" />
           <div>
-            <h1 className="text-2xl font-bold">تطبيق ACTES لويندوز</h1>
+            <h1 className="text-2xl font-bold">تطبيق Al-Raebi لويندوز</h1>
             <p className="text-sm text-muted-foreground mt-1">نسخة سطح المكتب — 64 بت</p>
           </div>
         </div>
@@ -50,7 +50,7 @@ function DownloadsPage() {
         </a>
 
         <p className="text-xs text-muted-foreground mt-6 text-center">
-          فُكّ ضغط الملف ثم شغّل <span className="font-mono">ACTES.exe</span>
+          فُكّ ضغط الملف ثم شغّل <span className="font-mono">Al-Raebi.exe</span>
         </p>
       </div>
     </main>

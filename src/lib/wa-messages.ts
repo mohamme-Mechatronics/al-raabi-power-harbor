@@ -116,13 +116,13 @@ export function resultToTurn(r: BotResult): ChatTurn {
       id: nextId(),
       from: "bot",
       kind: "doc",
-      name: String(r.quote_file_name || `${r.quote_number || "ACTES"}.pdf`),
+      name: String(r.quote_file_name || `${r.quote_number || "Al-Raebi"}.pdf`),
       caption: r.quote_caption || undefined,
       url: r.quote_file_url || undefined,
     });
   }
   if (r.send_study_file) {
-    messages.push({ id: nextId(), from: "bot", kind: "doc", name: "ACTES-PV-Study.pdf", caption: "دراسة الأداء PVsyst" });
+    messages.push({ id: nextId(), from: "bot", kind: "doc", name: "RAEBI-PV-Study.pdf", caption: "دراسة الأداء PVsyst" });
   }
   // المخطط الكهربائي يُرسم داخل الشاشة، فلا تُضاف بطاقة ملف شكلية.
 

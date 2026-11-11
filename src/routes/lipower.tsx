@@ -10,9 +10,9 @@ import { BrandProductDetail } from "@/components/brand-product-detail";
 export const Route = createFileRoute("/lipower")({
   head: () => ({
     meta: [
-      { title: "Li-Power — إنفرترات هجينة | ACTES" },
-      { name: "description", content: "إنفرترات Li-Power الهجينة 1.6 و4 و6.2 كيلوواط: المواصفات المعتمدة والمزايا والكتالوجات العربية لدى ACTES." },
-      { property: "og:title", content: "Li-Power — إنفرترات هجينة | ACTES" },
+      { title: "Li-Power — إنفرترات هجينة | Al-Raebi" },
+      { name: "description", content: "إنفرترات Li-Power الهجينة 1.6 و4 و6.2 كيلوواط: المواصفات المعتمدة والمزايا والكتالوجات العربية لدى Al-Raebi." },
+      { property: "og:title", content: "Li-Power — إنفرترات هجينة | Al-Raebi" },
       { property: "og:description", content: "تعرّف على إنفرترات Li-Power الهجينة ومواصفاتها وكتالوجاتها المعتمدة." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -38,7 +38,7 @@ function LiPowerPage() {
       <AgencyBadge brand="lipower" />
       <header className="sticky top-0 z-10 border-b border-border bg-card/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-          <div className="flex items-center gap-3"><img src={actesLogo} alt="ACTES" className="h-10 w-auto" /><span className="h-8 w-px bg-border" /><img src="/brand/makers/lipower.png" alt="Li-Power" className="h-7 w-auto" /></div>
+          <div className="flex items-center gap-3"><img src={actesLogo} alt="Al-Raebi" className="h-10 w-auto" /><span className="h-8 w-px bg-border" /><img src="/brand/makers/lipower.png" alt="Li-Power" className="h-7 w-auto" /></div>
           <Link to="/" className="inline-flex items-center gap-1 rounded-full border border-border px-4 py-1.5 text-sm hover:bg-muted">
             <ArrowRight className="h-4 w-4" /> الرئيسية
           </Link>
@@ -79,7 +79,7 @@ function LiPowerPage() {
 
       <AgencyShowcase brand="lipower" />
       <footer className="border-t border-border bg-card py-8 text-center text-sm text-muted-foreground">
-        Li-Power — متوفر لدى ACTES لحلول أنظمة الطاقة
+        Li-Power — متوفر لدى Al-Raebi لحلول أنظمة الطاقة
       </footer>
       {sel && <BrandProductDetail product={sel} accent="#f39200" gallery={["/media/items/lipower-1.6kw-12v.webp","/media/items/lipower-6.2kw-48v.webp"]} onClose={() => setSel(null)} />}
     </main>
