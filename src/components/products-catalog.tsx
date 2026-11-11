@@ -105,10 +105,10 @@ function CategoriesScreen({ onPick, onBack }: { onPick: (c: ProductCategory | "a
               onClick={() => onPick(cat.id)}
               className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card text-right shadow-sm transition hover:border-navy/40 hover:shadow-md"
             >
-              <span className="flex items-center gap-2.5 border-b border-border/70 px-3 py-2.5">
+              <span className="flex min-h-20 items-center gap-2 border-b border-border/70 px-3 py-2.5">
                 <span className={`grid size-8 shrink-0 place-items-center rounded-md [&_svg]:size-4 ${CAT_TONE[cat.id]}`}>{CAT_BIG_ICON[cat.id]}</span>
                 <span className="min-w-0 flex-1">
-                  <span className="block truncate text-[13px] font-black leading-tight text-navy lg:text-sm">{cat.title}</span>
+                  <span className="block whitespace-normal text-[12px] font-black leading-tight text-navy lg:text-sm">{cat.title}</span>
                   <span className="mt-0.5 block text-[10.5px] font-semibold text-muted-foreground">{items.length} موديل</span>
                 </span>
               </span>

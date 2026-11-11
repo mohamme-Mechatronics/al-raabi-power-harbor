@@ -18,6 +18,7 @@ import { Route as SuntechRouteImport } from './routes/suntech'
 import { Route as ApiTtsRouteImport } from './routes/api/tts'
 import { Route as AudioSplatRouteImport } from './routes/audio.$'
 import { Route as BrandSplatRouteImport } from './routes/brand.$'
+import { Route as BrandsBrandRouteImport } from './routes/brands.$brand'
 import { Route as CatalogsSplatRouteImport } from './routes/catalogs.$'
 import { Route as DownloadsACTESWindowsX64DotzipRouteImport } from './routes/downloads_.ACTES-windows-x64[.]zip'
 import { Route as FontsSplatRouteImport } from './routes/fonts.$'
@@ -71,6 +72,11 @@ const BrandSplatRoute = BrandSplatRouteImport.update({
   path: '/brand/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BrandsBrandRoute = BrandsBrandRouteImport.update({
+  id: '/brands/$brand',
+  path: '/brands/$brand',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CatalogsSplatRoute = CatalogsSplatRouteImport.update({
   id: '/catalogs/$',
   path: '/catalogs/$',
@@ -118,6 +124,7 @@ export interface FileRoutesByFullPath {
   '/api/tts': typeof ApiTtsRoute
   '/audio/$': typeof AudioSplatRoute
   '/brand/$': typeof BrandSplatRoute
+  '/brands/$brand': typeof BrandsBrandRoute
   '/catalogs/$': typeof CatalogsSplatRoute
   '/downloads/ACTES-windows-x64.zip': typeof DownloadsACTESWindowsX64DotzipRoute
   '/fonts/$': typeof FontsSplatRoute
@@ -136,6 +143,7 @@ export interface FileRoutesByTo {
   '/api/tts': typeof ApiTtsRoute
   '/audio/$': typeof AudioSplatRoute
   '/brand/$': typeof BrandSplatRoute
+  '/brands/$brand': typeof BrandsBrandRoute
   '/catalogs/$': typeof CatalogsSplatRoute
   '/downloads/ACTES-windows-x64.zip': typeof DownloadsACTESWindowsX64DotzipRoute
   '/fonts/$': typeof FontsSplatRoute
@@ -155,6 +163,7 @@ export interface FileRoutesById {
   '/api/tts': typeof ApiTtsRoute
   '/audio/$': typeof AudioSplatRoute
   '/brand/$': typeof BrandSplatRoute
+  '/brands/$brand': typeof BrandsBrandRoute
   '/catalogs/$': typeof CatalogsSplatRoute
   '/downloads_/ACTES-windows-x64.zip': typeof DownloadsACTESWindowsX64DotzipRoute
   '/fonts/$': typeof FontsSplatRoute
@@ -175,6 +184,7 @@ export interface FileRouteTypes {
     | '/api/tts'
     | '/audio/$'
     | '/brand/$'
+    | '/brands/$brand'
     | '/catalogs/$'
     | '/downloads/ACTES-windows-x64.zip'
     | '/fonts/$'
@@ -193,6 +203,7 @@ export interface FileRouteTypes {
     | '/api/tts'
     | '/audio/$'
     | '/brand/$'
+    | '/brands/$brand'
     | '/catalogs/$'
     | '/downloads/ACTES-windows-x64.zip'
     | '/fonts/$'
@@ -211,6 +222,7 @@ export interface FileRouteTypes {
     | '/api/tts'
     | '/audio/$'
     | '/brand/$'
+    | '/brands/$brand'
     | '/catalogs/$'
     | '/downloads_/ACTES-windows-x64.zip'
     | '/fonts/$'
@@ -230,6 +242,7 @@ export interface RootRouteChildren {
   ApiTtsRoute: typeof ApiTtsRoute
   AudioSplatRoute: typeof AudioSplatRoute
   BrandSplatRoute: typeof BrandSplatRoute
+  BrandsBrandRoute: typeof BrandsBrandRoute
   CatalogsSplatRoute: typeof CatalogsSplatRoute
   DownloadsACTESWindowsX64DotzipRoute: typeof DownloadsACTESWindowsX64DotzipRoute
   FontsSplatRoute: typeof FontsSplatRoute
@@ -304,6 +317,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BrandSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/brands/$brand': {
+      id: '/brands/$brand'
+      path: '/brands/$brand'
+      fullPath: '/brands/$brand'
+      preLoaderRoute: typeof BrandsBrandRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/catalogs/$': {
       id: '/catalogs/$'
       path: '/catalogs/$'
@@ -366,6 +386,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiTtsRoute: ApiTtsRoute,
   AudioSplatRoute: AudioSplatRoute,
   BrandSplatRoute: BrandSplatRoute,
+  BrandsBrandRoute: BrandsBrandRoute,
   CatalogsSplatRoute: CatalogsSplatRoute,
   DownloadsACTESWindowsX64DotzipRoute: DownloadsACTESWindowsX64DotzipRoute,
   FontsSplatRoute: FontsSplatRoute,
