@@ -49,9 +49,9 @@ export type View = {
 };
 
 const BRAND_LINES = [
-  "أكتس لأنظمة الطاقة وحلولها",
-  "أكتس لإستيراد أنظمة الطاقة",
-  "أكتس لاستيراد أنظمة الطاقة",
+  "الراعبي للتجارة",
+  "الراعبي للتجارة",
+  "الراعبي للتجارة",
 ];
 
 const DROP_PATTERNS = [
@@ -211,7 +211,7 @@ export function buildView(r: BotResult, step: string): View {
       city: String(r['city'] || ""),
       items,
       total,
-      fileName: String(r.quote_file_name || `عرض سعر ${r.quote_number || "ACTES"}.pdf`),
+      fileName: String(r.quote_file_name || `عرض سعر ${r.quote_number || "Al-Raebi"}.pdf`),
       fileUrl: r.quote_file_url || undefined,
       itemOrder: Boolean(r['item_quote']),
     };
@@ -286,7 +286,7 @@ export function buildView(r: BotResult, step: string): View {
       .map((i) => ({ title: i.name, lines: [...(i.details || []), `الكمية: ${i.qty}`] }));
   }
   if (hasQuote && !heading) heading = "عرض السعر الرسمي";
-  if (!heading) heading = "أكتس لأنظمة الطاقة وحلولها";
+  if (!heading) heading = "الراعبي للتجارة";
 
   const interactiveOptions = options.filter((o) => !/العودة/.test(o.title));
   const needsInput = interactiveOptions.length === 0 || /أدخل|ادخل|اكتب|يرجى إدخال|كم /.test(texts.join("\n"));

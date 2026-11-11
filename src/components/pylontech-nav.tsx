@@ -4,7 +4,7 @@ import { ArrowRight, ChevronDown, Download, Globe, Menu, Search, ShieldCheck, X 
 import type { Product } from "@/lib/products-data";
 import { officialCatalogUrl } from "@/lib/official-catalogs";
 import { PYLON_SOLUTIONS } from "@/lib/pylontech-solutions";
-import actesLogoAsset from "@/assets/imported/src/assets/actes-logo-full.webp.asset.json";
+import actesLogoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesLogo = actesLogoAsset.url;
 
 type Simple = { t: string; d?: string; h: string };
@@ -22,7 +22,7 @@ const MENUS: Menu[] = [
       { t: "تسجيل البطارية", h: "#support" },
       { t: "التحميلات", h: "#products" },
     ],
-    actes: { t: "دعم ACTES الفني", d: "تركيب وضمان وصيانة عبر الوكيل المعتمد", h: "#support" },
+    actes: { t: "دعم الراعبي الفني", d: "تركيب وضمان وصيانة عبر الوكيل المعتمد", h: "#support" },
   },
   {
     id: "contact", label: "اتصل بنا",
@@ -30,7 +30,7 @@ const MENUS: Menu[] = [
       { t: "تواصل معنا", h: "#contact" },
       { t: "انضم إلينا", h: "#contact" },
     ],
-    actes: { t: "تواصل مع ACTES", d: "استفسارات منتجات بايلونتك والدعم", h: "#contact" },
+    actes: { t: "تواصل مع الراعبي", d: "استفسارات منتجات بايلونتك والدعم", h: "#contact" },
   },
 ];
 
@@ -59,7 +59,7 @@ function Downloads({ products }: { products: Product[] }) {
 function ActesCard({ a, onClick }: { a: Simple; onClick?: () => void }) {
   return (
     <a href={a.h} onClick={onClick} className="mt-3 flex items-center gap-3 rounded-lg border border-primary/30 bg-primary/5 p-3 hover:bg-primary/10">
-      <img src={actesLogo} alt="ACTES" className="h-8 w-auto" />
+      <img src={actesLogo} alt="Al-Raebi" className="h-8 w-auto" />
       <div className="min-w-0 text-right">
         <p className="flex items-center gap-1 text-sm font-semibold text-primary"><ShieldCheck className="h-4 w-4" />{a.t}</p>
         {a.d && <p className="text-xs text-muted-foreground">{a.d}</p>}
@@ -80,10 +80,10 @@ export function PylontechNav({ products }: { products: Product[] }) {
         <div className="flex items-center gap-3">
           <img src="/media/pylontech/logo.svg" alt="PYLONTECH" className="h-6 w-auto" />
           <span className="h-7 w-px bg-border" />
-          <img src={actesLogo} alt="ACTES" className="h-9 w-auto" />
+          <img src={actesLogo} alt="Al-Raebi" className="h-9 w-auto" />
         </div>
         <nav className="hidden h-full items-stretch gap-7 text-[15px] lg:flex">
-          {[{ id: "solutions", label: "المنتجات والحلول", items: [...SOLUTIONS, { t: "جميع منتجات أكتس", h: "#products" }] }, ...MENUS].map((m) => (
+          {[{ id: "solutions", label: "المنتجات والحلول", items: [...SOLUTIONS, { t: "جميع منتجات الراعبي", h: "#products" }] }, ...MENUS].map((m) => (
             <div key={m.id} className="relative flex" onMouseEnter={() => setOpen(m.id)}>
               <button onClick={() => setOpen(open === m.id ? null : m.id)}
                 className={`flex items-center gap-1 border-b-2 ${open === m.id ? "border-primary text-primary" : "border-transparent hover:text-primary"}`}>
@@ -114,10 +114,10 @@ export function PylontechNav({ products }: { products: Product[] }) {
           <div className="absolute inset-0 bg-foreground/50" onClick={() => setMobile(false)} />
           <aside className="absolute inset-y-0 right-0 flex w-[85%] max-w-sm flex-col overflow-y-auto bg-background p-5">
             <div className="mb-4 flex items-center justify-between">
-              <img src={actesLogo} alt="ACTES" className="h-9 w-auto" />
+              <img src={actesLogo} alt="Al-Raebi" className="h-9 w-auto" />
               <button aria-label="إغلاق" onClick={() => setMobile(false)}><X className="h-6 w-6" /></button>
             </div>
-            {[{ id: "solutions", label: "المنتجات والحلول", items: SOLUTIONS, actes: { t: "متوفر لدى ACTES", d: "الكتالوجات المعتمدة", h: "#products" } }, ...MENUS].map((m) => (
+            {[{ id: "solutions", label: "المنتجات والحلول", items: SOLUTIONS, actes: { t: "متوفر لدى الراعبي", d: "الكتالوجات المعتمدة", h: "#products" } }, ...MENUS].map((m) => (
               <div key={m.id} className="border-b border-border">
                 <button className="flex w-full items-center justify-between py-4 font-medium" onClick={() => setAcc(acc === m.id ? null : m.id)}>
                   {m.label}<ChevronDown className={`h-4 w-4 transition ${acc === m.id ? "rotate-180" : ""}`} />

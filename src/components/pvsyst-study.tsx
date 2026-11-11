@@ -25,7 +25,7 @@ import { AZIMUTH_OPTIONS } from "@/lib/pvsyst-geometry";
 import { buildEconomics, capexFromQuoteItems, DEFAULT_TARIFF_USD } from "@/lib/pvsyst-economics";
 import { downloadPvsystReport } from "@/lib/pvsyst-pdf";
 import type { View } from "@/lib/present";
-import actesLogoPlain from "@/assets/actes-logo-plain.png.asset.json";
+import actesLogoPlain from "@/assets/brand/alraebi-logo-full.png.asset.json";
 
 const nf = (n: number, d = 0) => n.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
 
@@ -144,7 +144,7 @@ export default function PvsystStudy({ study, actions }: Props) {
       ? ((result.annualEnergy - baseAnnual) / baseAnnual) * 100
       : null;
 
-  const project = result.customer || result.reference || "ACTES Project";
+  const project = result.customer || result.reference || "Al-Raebi Project";
   const sysTitle = s.batteryKwh ? "Grid-Connected System with storage" : "Grid-Connected System";
   const today = new Date();
   const dstr = `${String(today.getDate()).padStart(2, "0")}/${String(today.getMonth() + 1).padStart(2, "0")}/${String(today.getFullYear()).slice(2)}`;
@@ -241,7 +241,7 @@ export default function PvsystStudy({ study, actions }: Props) {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `ACTES-PVsyst-${result.reference || "study"}.csv`;
+    a.download = `RAEBI-PVsyst-${result.reference || "study"}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -317,7 +317,7 @@ export default function PvsystStudy({ study, actions }: Props) {
               {s.kwp ? ` — Variant: ${nf(s.kwp, 0)} kWp` : ""}
             </p>
           </div>
-          <img src={actesLogoPlain.url} alt="ACTES" className="h-9 w-auto shrink-0 object-contain" />
+          <img src={actesLogoPlain.url} alt="Al-Raebi" className="h-9 w-auto shrink-0 object-contain" />
         </div>
         <div className="flex flex-wrap gap-x-4 gap-y-1 border-t px-3 py-1.5 text-[9.5px] text-neutral-600" dir="ltr" style={{ borderColor: C.grid }}>
           <span>Date: {dstr}</span>

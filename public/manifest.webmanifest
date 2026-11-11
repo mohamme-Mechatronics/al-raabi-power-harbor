@@ -1,8 +1,8 @@
 {
   "id": "/",
-  "name": "ACTES — أكتس لأنظمة الطاقة وحلولها",
-  "short_name": "ACTES",
-  "description": "نظام مبيعات ACTES لأنظمة الطاقة الشمسية",
+  "name": "الراعبي للتجارة — Al-Raebi For Trading",
+  "short_name": "الراعبي",
+  "description": "منصة الراعبي للتجارة لأنظمة الطاقة الشمسية وشواحن السيارات الكهربائية",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -10,10 +10,25 @@
   "dir": "rtl",
   "lang": "ar",
   "background_color": "#ffffff",
-  "theme_color": "#e30613",
+  "theme_color": "#0b3a78",
   "icons": [
-    { "src": "/__l5e/assets-v1/397ce18e-395f-4cbf-bab7-9ae19b63d49d/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "/__l5e/assets-v1/698070a6-4dbf-4120-8901-38b1d00e98bf/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "/__l5e/assets-v1/698070a6-4dbf-4120-8901-38b1d00e98bf/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "/__l5e/assets-v1/599d5106-73be-4471-a2a7-ae12df72c872/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/__l5e/assets-v1/8e459baf-97d3-46f9-8d1d-adf42c3787a7/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/__l5e/assets-v1/bfea784f-b106-451f-85e4-fad3f435af60/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }

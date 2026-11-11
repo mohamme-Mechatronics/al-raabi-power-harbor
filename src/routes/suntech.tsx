@@ -2,7 +2,7 @@ import { AgencyBadge, AgencyShowcase } from "@/components/agency-showcase";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ArrowRight, ChevronDown, Download, FileText, Mail, Menu, X } from "lucide-react";
-import actesLogoAsset from "@/assets/imported/src/assets/actes-logo-full.webp.asset.json";
+import actesLogoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesLogo = actesLogoAsset.url;
 import { PRODUCTS } from "@/lib/products-data";
 import { officialCatalogUrl } from "@/lib/official-catalogs";
@@ -11,9 +11,9 @@ import { BrandProductDetail } from "@/components/brand-product-detail";
 export const Route = createFileRoute("/suntech")({
   head: () => ({
     meta: [
-      { title: "Suntech — ألواح شمسية | ACTES الوكيل المعتمد" },
-      { name: "description", content: "موقع Suntech بالعربية: ألواح Ultra Series وN-Type ثنائية الوجه، المشاريع، التنزيلات والكتالوجات العربية لدى ACTES." },
-      { property: "og:title", content: "Suntech — ألواح شمسية | ACTES" },
+      { title: "Suntech — ألواح شمسية | الراعبي الوكيل المعتمد" },
+      { name: "description", content: "موقع Suntech بالعربية: ألواح Ultra Series وN-Type ثنائية الوجه، المشاريع، التنزيلات والكتالوجات العربية لدى الراعبي." },
+      { property: "og:title", content: "Suntech — ألواح شمسية | Al-Raebi" },
       { property: "og:description", content: "25 عاماً من تصنيع الألواح الكهروضوئية، أكثر من 55 GW شحنات عالمية." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
@@ -92,7 +92,7 @@ function SuntechPage() {
           <div className="flex items-center gap-3">
             <img src={`${M}/logo-suntech.webp`} alt="Suntech" className="h-8 w-auto" />
             <span className="h-7 w-px bg-border" />
-            <img src={actesLogo} alt="ACTES" className="h-8 w-auto" />
+            <img src={actesLogo} alt="Al-Raebi" className="h-8 w-auto" />
             <span className="hidden text-xs text-muted-foreground sm:inline">الوكيل المعتمد</span>
           </div>
           <nav className="hidden items-center gap-1 lg:flex">
@@ -171,7 +171,7 @@ function SuntechPage() {
               <div key={p.id} onClick={() => setDetail(p.id)} role="button" className="flex cursor-pointer gap-5 rounded-lg border border-border bg-background p-5 transition hover:border-[#e60012] hover:shadow-lg">
                 <img src={p.image} alt={p.model} className="h-40 w-28 rounded object-cover" />
                 <div className="flex-1">
-                  <p className="text-xs text-muted-foreground">متوفر لدى ACTES</p>
+                  <p className="text-xs text-muted-foreground">متوفر لدى الراعبي</p>
                   <h3 className="mt-1 font-bold">{p.name}</h3>
                   <p className="text-sm text-muted-foreground" dir="ltr" style={{ textAlign: "right" }}>{p.model}</p>
                   <p className={`mt-2 text-lg font-bold ${ACCENT}`} dir="ltr" style={{ textAlign: "right" }}>{p.power}</p>
@@ -282,8 +282,8 @@ function SuntechPage() {
             <a href="https://www.suntech-power.com/contact-us/" target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-1 text-sm hover:text-[#e60012]"><Mail className="h-4 w-4" />صفحة التواصل الرسمية</a>
           </div>
           <div className="flex items-center gap-4 rounded-lg border border-border p-5">
-            <img src={actesLogo} alt="ACTES" className="h-12 w-auto" />
-            <div><p className="font-bold">ACTES — الوكيل المعتمد لـ Suntech في اليمن</p><p className="text-sm text-muted-foreground">للاستشارات والتوريد والكتالوجات العربية المعتمدة.</p></div>
+            <img src={actesLogo} alt="Al-Raebi" className="h-12 w-auto" />
+            <div><p className="font-bold">Al-Raebi — الوكيل المعتمد لـ Suntech في اليمن</p><p className="text-sm text-muted-foreground">للاستشارات والتوريد والكتالوجات العربية المعتمدة.</p></div>
           </div>
         </div>
       </section>

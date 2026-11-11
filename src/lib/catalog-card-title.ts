@@ -5,25 +5,27 @@
 type TitleProduct = { brand: string; name: string; power: string; category: string };
 
 const BRAND_AR: Array<[RegExp, string]> = [
-  [/suntech/i, "سنتك"],
-  [/deye/i, "داي"],
-  [/solis/i, "سوليس"],
-  [/li-?power/i, "لي باور"],
-  [/pylontech/i, "بايلونتك"],
-  [/hithium|heroee/i, "هاي ثيوم"],
+  [/grasen/i, "جراسين"],
+  [/trina/i, "ترينا سولار"],
+  [/huasun/i, "هواسن"],
+  [/dyness/i, "داينس"],
+  [/lux\s*power/i, "لاكس باور"],
+  [/sungrow/i, "سنجرو"],
+  [/atess/i, "أتيس"],
 ];
 
 const BRAND_EN: Array<[RegExp, string]> = [
-  [/suntech/i, "Suntech"],
-  [/deye/i, "Deye"],
-  [/solis/i, "Solis"],
-  [/li-?power/i, "Li-Power"],
-  [/pylontech/i, "Pylontech"],
-  [/hithium|heroee/i, "Hithium"],
+  [/grasen/i, "GRASEN"],
+  [/trina/i, "Trina Solar"],
+  [/huasun/i, "Huasun"],
+  [/dyness/i, "Dyness"],
+  [/lux\s*power/i, "Luxpower"],
+  [/sungrow/i, "Sungrow"],
+  [/atess/i, "ATESS"],
 ];
 
-const KIND_AR: Record<string, string> = { panels: "لوح", inverters: "إنفرتر", batteries: "بطارية", storage: "نظام تخزين" };
-const KIND_EN: Record<string, string> = { panels: "Panel", inverters: "Inverter", batteries: "Battery", storage: "ESS" };
+const KIND_AR: Record<string, string> = { "ev-chargers": "شاحن", panels: "لوح", inverters: "إنفرتر هجين", "grid-inverters": "إنفرتر شبكة", batteries: "بطارية" };
+const KIND_EN: Record<string, string> = { "ev-chargers": "EV Charger", panels: "Panel", inverters: "Hybrid Inverter", "grid-inverters": "On-Grid Inverter", batteries: "Battery" };
 
 function brandAr(brand: string) {
   return BRAND_AR.find(([re]) => re.test(brand))?.[1] ?? brand;

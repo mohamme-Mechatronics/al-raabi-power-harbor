@@ -2,7 +2,7 @@ import { AgencyBadge, AgencyShowcase } from "@/components/agency-showcase";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowRight, BatteryCharging, FileText, Flame, Gauge, Layers, ShieldCheck, Thermometer } from "lucide-react";
-import actesLogoAsset from "@/assets/imported/src/assets/actes-logo-full.webp.asset.json";
+import actesLogoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesLogo = actesLogoAsset.url;
 import { PRODUCTS, type Product } from "@/lib/products-data";
 import { BrandProductDetail } from "@/components/brand-product-detail";
@@ -11,10 +11,10 @@ import { useResolvedVideoSrc } from "@/lib/video-source";
 export const Route = createFileRoute("/hithium")({
   head: () => ({
     meta: [
-      { title: "HiTHIUM — أنظمة تخزين الطاقة بالبطاريات | ACTES" },
-      { name: "description", content: "HiTHIUM HeroEE: بطاريات منزلية وخزانات تخزين تجارية وصناعية بخلايا 314Ah وعمر 11000 دورة — المواصفات والكتالوجات لدى ACTES." },
+      { title: "HiTHIUM — أنظمة تخزين الطاقة بالبطاريات | Al-Raebi" },
+      { name: "description", content: "HiTHIUM HeroEE: بطاريات منزلية وخزانات تخزين تجارية وصناعية بخلايا 314Ah وعمر 11000 دورة — المواصفات والكتالوجات لدى الراعبي." },
       { property: "og:title", content: "HiTHIUM — تخزين طاقة آمن وطويل العمر" },
-      { property: "og:description", content: "حلول HiTHIUM لتخزين الطاقة للمنازل والقطاع التجاري والصناعي، بالعربية عبر ACTES." },
+      { property: "og:description", content: "حلول HiTHIUM لتخزين الطاقة للمنازل والقطاع التجاري والصناعي، بالعربية عبر الراعبي." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -67,7 +67,7 @@ function HithiumPage() {
       <AgencyBadge brand="hithium" />
       <header className="sticky top-0 z-10 border-b border-border bg-card/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
-          <div className="flex items-center gap-3"><img src={actesLogo} alt="ACTES" className="h-9 w-auto" /><span className="h-7 w-px bg-border" /><img src="/brand/makers/hithium.png" alt="HiTHIUM" className="h-6 w-auto" /></div>
+          <div className="flex items-center gap-3"><img src={actesLogo} alt="Al-Raebi" className="h-9 w-auto" /><span className="h-7 w-px bg-border" /><img src="/brand/makers/hithium.png" alt="HiTHIUM" className="h-6 w-auto" /></div>
           <HiNav />
           <Link to="/" className="inline-flex items-center gap-1 rounded-full border border-border px-4 py-1.5 text-sm hover:bg-muted"><ArrowRight className="h-4 w-4" /> الرئيسية</Link>
         </div>
@@ -120,7 +120,7 @@ function HithiumPage() {
       </section>
 
       <AgencyShowcase brand="hithium" />
-      <footer className="border-t border-border bg-card py-8 text-center text-sm text-muted-foreground">HiTHIUM — متوفر لدى ACTES لحلول أنظمة الطاقة</footer>
+      <footer className="border-t border-border bg-card py-8 text-center text-sm text-muted-foreground">HiTHIUM — متوفر لدى الراعبي لحلول أنظمة الطاقة</footer>
       {sel && <BrandProductDetail product={sel} accent="#00a0e9" gallery={["/media/hithium-legend-112s.webp","/media/hithium-legend-112c.webp","/media/items/battery-hithium-legnd-16kwh.webp","/media/items/battery-hithium-12v-314ah.webp"]} onClose={() => setSel(null)} />}
     </main>
   );

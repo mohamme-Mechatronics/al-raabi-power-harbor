@@ -5,7 +5,7 @@ import { CheckCircle2, Download, Link2, ShieldCheck, X } from "lucide-react";
 import type { Product } from "@/lib/products-data";
 import type { PylonSolution } from "@/lib/pylontech-solutions";
 import { officialCatalogUrl } from "@/lib/official-catalogs";
-import actesLogoAsset from "@/assets/imported/src/assets/actes-logo-full.webp.asset.json";
+import actesLogoAsset from "@/assets/brand/alraebi-logo-full.png.asset.json";
 const actesLogo = actesLogoAsset.url;
 
 export function PylontechSolution({ s, products, onClose, onProduct }: { s: PylonSolution; products: Product[]; onClose: () => void; onProduct: (id: string) => void }) {
@@ -21,7 +21,7 @@ export function PylontechSolution({ s, products, onClose, onProduct }: { s: Pylo
         <div className="flex items-center gap-3">
           <img src="/media/pylontech/logo.svg" alt="PYLONTECH" className="h-5 w-auto" />
           <span className="h-6 w-px bg-border" />
-          <img src={actesLogo} alt="ACTES" className="h-8 w-auto" />
+          <img src={actesLogo} alt="Al-Raebi" className="h-8 w-auto" />
         </div>
         <button aria-label="إغلاق" onClick={onClose} className="rounded-full border border-border p-2 hover:bg-muted"><X className="h-5 w-5" /></button>
       </div>
@@ -46,11 +46,11 @@ export function PylontechSolution({ s, products, onClose, onProduct }: { s: Pylo
           </div>
         </section>
 
-        {/* أكتس — التكامل الهندسي */}
+        {/* الراعبي — التكامل الهندسي */}
         <section className="rounded-2xl border border-primary/30 bg-primary/5 p-6">
-          <h2 className="flex items-center gap-2 text-xl font-bold text-primary"><ShieldCheck className="h-5 w-5" />التكامل الهندسي من أكتس</h2>
+          <h2 className="flex items-center gap-2 text-xl font-bold text-primary"><ShieldCheck className="h-5 w-5" />التكامل الهندسي من الراعبي</h2>
           <p className="mt-3 leading-7">{s.actes}</p>
-          <p className="mt-4 flex items-center gap-2 text-sm font-semibold"><Link2 className="h-4 w-4" />متوافق مع منتجات أكتس:</p>
+          <p className="mt-4 flex items-center gap-2 text-sm font-semibold"><Link2 className="h-4 w-4" />متوافق مع منتجات الراعبي:</p>
           <ul className="mt-2 flex flex-wrap gap-2">
             {s.pairs.map((x) => <li key={x} className="rounded-full border border-border bg-background px-3 py-1 text-xs">{x}</li>)}
           </ul>
@@ -79,7 +79,7 @@ export function PylontechSolution({ s, products, onClose, onProduct }: { s: Pylo
       </div>
       {/* صفحات منتجات الحل كاملة */}
       <div className="border-t border-border">
-        <h2 className="mx-auto max-w-7xl px-5 pt-10 text-2xl font-bold">منتجات الحل المتوفرة لدى أكتس</h2>
+        <h2 className="mx-auto max-w-7xl px-5 pt-10 text-2xl font-bold">منتجات الحل المتوفرة لدى الراعبي</h2>
         {list.map((p) => <ProductBody key={p.id} product={p} accent="#00a5b0" />)}
       </div>
     </div>,
