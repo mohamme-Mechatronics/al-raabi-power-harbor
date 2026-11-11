@@ -1,8 +1,8 @@
-# Import windows-sound-scout (ACTES)
-- [x] Copy all pages, code and settings from GitHub.
-- [x] Re-upload all media (photos, audio, videos, catalogs) into this project.
-- [x] Recreate orders and notifications storage in Cloud; verify one save and read.
-- [x] Verify voice narration and main pages.
-- [x] Add ADMIN_PASSWORD (saved securely; sign-in with it not tested by me).
+# Al-Raebi rebrand
+- [ ] Replace ACTES name and logo with Al-Raebi For Trading everywhere (site, icons, PDFs, voice texts).
+- [ ] Replace product catalog with GRASEN, Trina, Huasun, Dyness, Luxpower, Sungrow, ATESS products.
+- [ ] Official product photos from manufacturer sites.
+- [ ] Replace old brand pages with pages for the new brands.
+- [ ] Switch quote tool to the new products: prices waiting on user.
+- [ ] Phase two: videos (user will provide/edit later).
 - [ ] Import existing orders/notifications: waiting for an export from the old project.
-- [ ] Point the Windows desktop app at the new site address: after publishing.
