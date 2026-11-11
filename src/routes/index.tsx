@@ -527,7 +527,7 @@ function ActesApp() {
       } catch {
         // نكمل الإشعار بدون رقم العميل عند تعذر قراءته
       }
-      const customerName = String(clientNameRef.current || result["customer_name"] || sessionRef.current["customer_name"] || "عميل Al-Raebi");
+      const customerName = String(clientNameRef.current || result["customer_name"] || sessionRef.current["customer_name"] || "عميل الراعبي");
       const quoteNumber = String(result["quote_number"] || sessionRef.current["quote_number"] || "");
       const lastQuote = lastQuoteRef.current;
       const total = Number(lastQuote?.total) || 0;
@@ -567,7 +567,7 @@ function ActesApp() {
 
       const lines = [
         `🔔 *${kindLabel}*`,
-        "طلب من عميل عبر تطبيق Al-Raebi — يرجى التواصل معه، ولا يحتاج تأكيد أو إلغاء فاتورة.",
+        "طلب من عميل عبر تطبيق الراعبي — يرجى التواصل معه، ولا يحتاج تأكيد أو إلغاء فاتورة.",
         "",
         `👤 اسم العميل: ${customerName}`,
         clientPhone ? `📞 رقم العميل: ${clientPhone}` : "",
@@ -590,7 +590,7 @@ function ActesApp() {
         // نرسل بقية بيانات الطلب إذا تعذرت قراءة رقم العميل.
       }
 
-      const customerName = String(clientNameRef.current || result["customer_name"] || sessionRef.current["customer_name"] || "عميل Al-Raebi");
+      const customerName = String(clientNameRef.current || result["customer_name"] || sessionRef.current["customer_name"] || "عميل الراعبي");
       const paymentMethod = String(result["service_needed"] || sessionRef.current["service_needed"] || "حوالة");
       const quoteNumber = String(result["quote_number"] || sessionRef.current["quote_number"] || "");
       const lastQuote = lastQuoteRef.current;
@@ -1017,7 +1017,7 @@ function SettingsPanel({ open, onClose, isAdmin, clientName = "", onRestart, onS
           </div>
           <div className="flex items-center justify-between rounded-md border border-border px-4 py-3 text-sm">
             <span className="font-bold">نوع الحساب</span>
-            <span className="font-semibold text-muted-foreground">{isAdmin ? "إدارة Al-Raebi" : clientName ? `عميل — ${clientName}` : "عميل"}</span>
+            <span className="font-semibold text-muted-foreground">{isAdmin ? "إدارة الراعبي" : clientName ? `عميل — ${clientName}` : "عميل"}</span>
           </div>
           <button type="button" onClick={onRestart} className="flex w-full items-center gap-3 rounded-md border border-border px-4 py-3 text-sm font-bold transition hover:bg-muted">
             <RotateCcw className="size-4" /> بدء محادثة جديدة من البداية
@@ -1459,7 +1459,7 @@ function HomeDashboard({ onService, onProducts }: { onService: (kind: "quote" | 
         <ServiceCard image={refCardQuote} icon={<FileText />} title="طلب عرض سعر" description="احصل على أفضل العروض والأسعار المناسبة لمشروعك." action="ابدأ الآن" tone="brand" onClick={() => onService("quote")} />
         <ServiceCard image={refCardEnergy} icon={<Sun />} title="حلول أنظمة الطاقة" description="اكتشف حلولنا المتكاملة لأنظمة الشمسية للمنازل والمنشآت." action="حلول الطاقة" tone="energy" onClick={() => onService("energy")} />
         <ServiceCard image={refCardSupport} icon={<Headphones />} title="الدعم الفني" description="فريقنا المتخصص جاهز لمساعدتك في أي استفسار أو مشكلة فنية." action="تواصل معنا" tone="skyline" onClick={() => onService("support")} />
-        <ServiceCard image={refCardProducts} icon={<Package />} title="تعرف على منتجاتنا" description="اكتشف منتجات Al-Raebi، وتعرّف على مواصفاتها واستخداماتها واطلع على الكتالوجات والأدلة." action="استكشف المنتجات" tone="navy" onClick={onProducts} />
+        <ServiceCard image={refCardProducts} icon={<Package />} title="تعرف على منتجاتنا" description="اكتشف منتجات الراعبي، وتعرّف على مواصفاتها واستخداماتها واطلع على الكتالوجات والأدلة." action="استكشف المنتجات" tone="navy" onClick={onProducts} />
       </section>
 
       <footer className="shrink-0 rounded-xl bg-navy px-3 py-2.5 text-center text-[11px] font-bold text-skyline-foreground lg:hidden">
@@ -1482,7 +1482,7 @@ function PartnersStrip() {
   const trackRef = useRef<HTMLDivElement>(null);
   return (
     <section
-      aria-label="وكلاء وشركاء Al-Raebi"
+      aria-label="وكلاء وشركاء الراعبي"
       className="shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
     >
       <div className="flex items-stretch">
@@ -1491,7 +1491,7 @@ function PartnersStrip() {
           <div className="relative w-full">
             <img
               src={partnersStrip}
-              alt="وكلاء Al-Raebi: Li Power، PYLONTECH، SUNTECH، HTHIUM، sunways"
+              alt="وكلاء الراعبي: Li Power، PYLONTECH، SUNTECH، HTHIUM، sunways"
               loading="eager"
               decoding="sync"
               fetchPriority="high"
@@ -2387,7 +2387,7 @@ function HourlyLoadEntry({ onSubmit }: { onSubmit: (value: string) => void }) {
 }
 
 function MediaGallery({ images }: { images: View["images"] }) {
-  return <div className={`mb-4 grid gap-2 ${images.length > 1 ? "md:grid-cols-2" : ""}`}>{images.map((image, index) => <figure data-photo-section key={index} className="overflow-hidden rounded-lg border border-border bg-muted/35"><div className="flex min-h-24 items-center justify-center p-2"><img src={image.url} alt={image.caption || "صورة من منتجات Al-Raebi"} className="max-h-[210px] w-auto max-w-full object-contain" /></div>{image.caption && <figcaption className="border-t border-border bg-card px-3 py-2 text-[11px] leading-5 text-muted-foreground">{image.caption}</figcaption>}</figure>)}</div>;
+  return <div className={`mb-4 grid gap-2 ${images.length > 1 ? "md:grid-cols-2" : ""}`}>{images.map((image, index) => <figure data-photo-section key={index} className="overflow-hidden rounded-lg border border-border bg-muted/35"><div className="flex min-h-24 items-center justify-center p-2"><img src={image.url} alt={image.caption || "صورة من منتجات الراعبي"} className="max-h-[210px] w-auto max-w-full object-contain" /></div>{image.caption && <figcaption className="border-t border-border bg-card px-3 py-2 text-[11px] leading-5 text-muted-foreground">{image.caption}</figcaption>}</figure>)}</div>;
 }
 
 const SPEC_ICONS = [Sun, Zap, BatteryCharging, Network, Settings];
@@ -2588,7 +2588,7 @@ function QuoteCard({ quote }: { quote: NonNullable<View["quote"]> }) {
               <span key={name} dir="ltr" className="rounded-full border border-energy/40 bg-energy/10 px-3 py-1 text-[11px] font-bold text-energy">{name}</span>
             ))}
           </div>
-          <p className="mt-2 text-[10px] leading-5 text-muted-foreground">جميع المكونات الموردة من Al-Raebi أصلية ومطابقة للمعايير الدولية أعلاه.</p>
+          <p className="mt-2 text-[10px] leading-5 text-muted-foreground">جميع المكونات الموردة من الراعبي أصلية ومطابقة للمعايير الدولية أعلاه.</p>
         </div>
       </div>
 

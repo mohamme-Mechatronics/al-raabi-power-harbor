@@ -8,7 +8,7 @@ import {
 import actesLogoPlain from "@/assets/brand/alraebi-logo-full.png.asset.json";
 
 /**
- * تقرير دراسة الجدوى الاقتصادية والوفر البيئي — مستند رسمي مستقل بهوية Al-Raebi
+ * تقرير دراسة الجدوى الاقتصادية والوفر البيئي — مستند رسمي مستقل بهوية الراعبي
  * يحوي المؤشرات المالية، منحنى التدفق النقدي، مقارنة التكلفة المتراكمة،
  * جدول الـ 25 سنة، تحليل السيناريوهات، والأثر البيئي.
  */
@@ -175,7 +175,7 @@ export function downloadEconomicReport(
 
   <h2>مقارنة التكلفة المتراكمة</h2>
   ${compSvg}
-  <div class="legend"><b style="color:#c0392b">■ الديزل والشبكة</b><b style="color:#15803d">■ منظومة Al-Raebi</b></div>
+  <div class="legend"><b style="color:#c0392b">■ الديزل والشبكة</b><b style="color:#15803d">■ منظومة الراعبي</b></div>
 
   <div class="foot"><span>Al-Raebi Energy Systems &amp; Solutions</span><span>صفحة 1/2</span></div>
 </div>

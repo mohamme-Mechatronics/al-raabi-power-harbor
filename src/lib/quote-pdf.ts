@@ -68,7 +68,7 @@ export function downloadQuotePdf(quote: Quote) {
   <div class="box">
     <h3>${esc(CERTIFICATES_TITLE)}</h3>
     ${CERTIFICATES.map((name) => `<span class="cert">${esc(name)}</span>`).join("")}
-    <p class="note">جميع المكونات الموردة من Al-Raebi أصلية ومطابقة للمعايير الدولية أعلاه.</p>
+    <p class="note">جميع المكونات الموردة من الراعبي أصلية ومطابقة للمعايير الدولية أعلاه.</p>
   </div>
 </div>
 

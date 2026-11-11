@@ -38,7 +38,7 @@ export function ProductBody({ product: p, accent, gallery }: { product: Product;
           <div className="flex items-center justify-center"><img src={p.image} alt={p.name} className="max-h-[45svh] object-contain" /></div>
         </div>
       </section>
-      {/* فيديو ووصف Al-Raebi */}
+      {/* فيديو ووصف الراعبي */}
       <section className="mx-auto grid max-w-7xl gap-8 px-5 py-12 md:grid-cols-2">
         <div className="overflow-hidden rounded-2xl bg-muted">
           {video ? (

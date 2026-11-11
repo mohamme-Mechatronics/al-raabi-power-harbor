@@ -22,7 +22,7 @@ const MENUS: Menu[] = [
       { t: "تسجيل البطارية", h: "#support" },
       { t: "التحميلات", h: "#products" },
     ],
-    actes: { t: "دعم Al-Raebi الفني", d: "تركيب وضمان وصيانة عبر الوكيل المعتمد", h: "#support" },
+    actes: { t: "دعم الراعبي الفني", d: "تركيب وضمان وصيانة عبر الوكيل المعتمد", h: "#support" },
   },
   {
     id: "contact", label: "اتصل بنا",
@@ -30,7 +30,7 @@ const MENUS: Menu[] = [
       { t: "تواصل معنا", h: "#contact" },
       { t: "انضم إلينا", h: "#contact" },
     ],
-    actes: { t: "تواصل مع Al-Raebi", d: "استفسارات منتجات بايلونتك والدعم", h: "#contact" },
+    actes: { t: "تواصل مع الراعبي", d: "استفسارات منتجات بايلونتك والدعم", h: "#contact" },
   },
 ];
 
@@ -117,7 +117,7 @@ export function PylontechNav({ products }: { products: Product[] }) {
               <img src={actesLogo} alt="Al-Raebi" className="h-9 w-auto" />
               <button aria-label="إغلاق" onClick={() => setMobile(false)}><X className="h-6 w-6" /></button>
             </div>
-            {[{ id: "solutions", label: "المنتجات والحلول", items: SOLUTIONS, actes: { t: "متوفر لدى Al-Raebi", d: "الكتالوجات المعتمدة", h: "#products" } }, ...MENUS].map((m) => (
+            {[{ id: "solutions", label: "المنتجات والحلول", items: SOLUTIONS, actes: { t: "متوفر لدى الراعبي", d: "الكتالوجات المعتمدة", h: "#products" } }, ...MENUS].map((m) => (
               <div key={m.id} className="border-b border-border">
                 <button className="flex w-full items-center justify-between py-4 font-medium" onClick={() => setAcc(acc === m.id ? null : m.id)}>
                   {m.label}<ChevronDown className={`h-4 w-4 transition ${acc === m.id ? "rotate-180" : ""}`} />

@@ -3,12 +3,12 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/downloads")({
   head: () => ({
     meta: [
-      { title: "تحميل تطبيق Al-Raebi لويندوز" },
+      { title: "تحميل تطبيق الراعبي لويندوز" },
       {
         name: "description",
-        content: "تحميل تطبيق Al-Raebi Desktop الخفيف لنظام ويندوز — أقل من 2 ميغابايت.",
+        content: "تحميل تطبيق الراعبي Desktop الخفيف لنظام ويندوز — أقل من 2 ميغابايت.",
       },
-      { property: "og:title", content: "تحميل تطبيق Al-Raebi لويندوز" },
+      { property: "og:title", content: "تحميل تطبيق الراعبي لويندوز" },
       {
         property: "og:description",
         content: "تطبيق سطح مكتب خفيف لويندوز 10 و11 بحجم أقل من 2 ميغابايت.",
@@ -30,7 +30,7 @@ function DownloadsPage() {
         <div className="flex items-center gap-4 mb-6">
           <img src="/brand/alraebi-app-icon.png" alt="Al-Raebi" className="w-16 h-16 rounded-2xl" />
           <div>
-            <h1 className="text-2xl font-bold">تطبيق Al-Raebi لويندوز</h1>
+            <h1 className="text-2xl font-bold">تطبيق الراعبي لويندوز</h1>
             <p className="text-sm text-muted-foreground mt-1">نسخة سطح المكتب — 64 بت</p>
           </div>
         </div>

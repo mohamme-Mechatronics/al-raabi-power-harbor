@@ -11,8 +11,8 @@ import { BrandProductDetail } from "@/components/brand-product-detail";
 export const Route = createFileRoute("/suntech")({
   head: () => ({
     meta: [
-      { title: "Suntech — ألواح شمسية | Al-Raebi الوكيل المعتمد" },
-      { name: "description", content: "موقع Suntech بالعربية: ألواح Ultra Series وN-Type ثنائية الوجه، المشاريع، التنزيلات والكتالوجات العربية لدى Al-Raebi." },
+      { title: "Suntech — ألواح شمسية | الراعبي الوكيل المعتمد" },
+      { name: "description", content: "موقع Suntech بالعربية: ألواح Ultra Series وN-Type ثنائية الوجه، المشاريع، التنزيلات والكتالوجات العربية لدى الراعبي." },
       { property: "og:title", content: "Suntech — ألواح شمسية | Al-Raebi" },
       { property: "og:description", content: "25 عاماً من تصنيع الألواح الكهروضوئية، أكثر من 55 GW شحنات عالمية." },
       { property: "og:type", content: "website" },
@@ -171,7 +171,7 @@ function SuntechPage() {
               <div key={p.id} onClick={() => setDetail(p.id)} role="button" className="flex cursor-pointer gap-5 rounded-lg border border-border bg-background p-5 transition hover:border-[#e60012] hover:shadow-lg">
                 <img src={p.image} alt={p.model} className="h-40 w-28 rounded object-cover" />
                 <div className="flex-1">
-                  <p className="text-xs text-muted-foreground">متوفر لدى Al-Raebi</p>
+                  <p className="text-xs text-muted-foreground">متوفر لدى الراعبي</p>
                   <h3 className="mt-1 font-bold">{p.name}</h3>
                   <p className="text-sm text-muted-foreground" dir="ltr" style={{ textAlign: "right" }}>{p.model}</p>
                   <p className={`mt-2 text-lg font-bold ${ACCENT}`} dir="ltr" style={{ textAlign: "right" }}>{p.power}</p>

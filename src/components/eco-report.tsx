@@ -278,7 +278,7 @@ export function EcoReport({ kw, price: price0, onBuy, onEdit, onSales, system, p
             <div>
               <h2 className="text-2xl font-extrabold leading-snug sm:text-4xl" style={{ color: R.ink }}>{project || "منظومة الطاقة الشمسية والتخزين"}</h2>
               <p className="mt-2 text-2xl font-extrabold leading-snug sm:text-4xl" style={{ color: R.red }}>دراسة الجدوى الاقتصادية</p>
-              <p className="mt-4 text-sm" style={{ color: R.sub }}>دراسة فنية ومالية تنفيذية مقدمة من Al-Raebi • إصدار {new Date().getFullYear()}</p>
+              <p className="mt-4 text-sm" style={{ color: R.sub }}>دراسة فنية ومالية تنفيذية مقدمة من الراعبي • إصدار {new Date().getFullYear()}</p>
             </div>
             <div className="rounded-xl border bg-white p-5 shadow-md lg:order-first" style={{ borderColor: R.line, borderTop: `5px solid ${R.red}` }}>
               <p className="text-[13px] font-semibold" style={{ color: "#1f2937" }}>ملخص الاستثمار</p>

@@ -491,7 +491,7 @@ function ShareSheet({ product, onClose }: { product: Product; onClose: () => voi
 }
 
 function ProductDetail({ product, onOpen, onBack, backLabel }: { product: Product; onOpen: (id: string) => void; onBack: () => void; backLabel?: string | undefined }) {
-  // فيديو تعريفي حقيقي داخل معرض Al-Raebi يبدأ أولاً (إن توفر لهذا الموديل)، ثم تظهر تفاصيل المنتج.
+  // فيديو تعريفي حقيقي داخل معرض الراعبي يبدأ أولاً (إن توفر لهذا الموديل)، ثم تظهر تفاصيل المنتج.
   const videoKey = product.baseId ?? product.id;
   const video = useMemo(() => getProductVideo(videoKey), [videoKey]);
   const [reelDone, setReelDone] = useState(!video);
@@ -616,7 +616,7 @@ function ProductDetail({ product, onOpen, onBack, backLabel }: { product: Produc
             </div>
             {linked.length > 0 && (
               <div className="mt-3">
-                <p className="mb-1.5 text-xs font-black text-navy">متوفر في كتالوج Al-Raebi — اضغط للانتقال:</p>
+                <p className="mb-1.5 text-xs font-black text-navy">متوفر في كتالوج الراعبي — اضغط للانتقال:</p>
                 <div className="grid gap-2 sm:grid-cols-2">
                   {linked.map((lp) => (
                     <button key={lp.id} type="button" onClick={() => onOpen(lp.id)} className="flex items-center gap-2 rounded-xl border border-border bg-card p-2 text-right transition hover:-translate-y-0.5 hover:shadow-md">

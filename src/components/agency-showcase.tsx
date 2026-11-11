@@ -70,7 +70,7 @@ export function AgencyBadge({ brand }: { brand: BrandKey }) {
       <div dir="rtl" className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-2 px-4 py-2 text-xs sm:text-sm">
         <BadgeCheck className="h-4 w-4 text-primary" />
         <span className="font-semibold">الوكيل المعتمد لـ {CFG[brand].name} في الجمهورية اليمنية</span>
-        <span className="text-muted-foreground">— Al-Raebi لحلول أنظمة الطاقة</span>
+        <span className="text-muted-foreground">— الراعبي لحلول أنظمة الطاقة</span>
       </div>
     </div>
   );
@@ -133,7 +133,7 @@ export function AgencyShowcase({ brand }: { brand: BrandKey }) {
         </div>
         <div className="rounded-3xl border border-border bg-card p-6 lg:col-span-2">
           <h2 className="text-xl font-bold">تكامل المنظومة</h2>
-          <p className="mt-1 text-sm text-muted-foreground">موقع منتجات {c.name} داخل منظومة Al-Raebi المتكاملة.</p>
+          <p className="mt-1 text-sm text-muted-foreground">موقع منتجات {c.name} داخل منظومة الراعبي المتكاملة.</p>
           <ol className="mt-5 space-y-2">
             {flow.map(({ icon: I, t, on }, i) => (
               <li key={t}>

@@ -11,7 +11,7 @@ export const Route = createFileRoute("/lipower")({
   head: () => ({
     meta: [
       { title: "Li-Power — إنفرترات هجينة | Al-Raebi" },
-      { name: "description", content: "إنفرترات Li-Power الهجينة 1.6 و4 و6.2 كيلوواط: المواصفات المعتمدة والمزايا والكتالوجات العربية لدى Al-Raebi." },
+      { name: "description", content: "إنفرترات Li-Power الهجينة 1.6 و4 و6.2 كيلوواط: المواصفات المعتمدة والمزايا والكتالوجات العربية لدى الراعبي." },
       { property: "og:title", content: "Li-Power — إنفرترات هجينة | Al-Raebi" },
       { property: "og:description", content: "تعرّف على إنفرترات Li-Power الهجينة ومواصفاتها وكتالوجاتها المعتمدة." },
       { property: "og:type", content: "website" },
@@ -79,7 +79,7 @@ function LiPowerPage() {
 
       <AgencyShowcase brand="lipower" />
       <footer className="border-t border-border bg-card py-8 text-center text-sm text-muted-foreground">
-        Li-Power — متوفر لدى Al-Raebi لحلول أنظمة الطاقة
+        Li-Power — متوفر لدى الراعبي لحلول أنظمة الطاقة
       </footer>
       {sel && <BrandProductDetail product={sel} accent="#f39200" gallery={["/media/items/lipower-1.6kw-12v.webp","/media/items/lipower-6.2kw-48v.webp"]} onClose={() => setSel(null)} />}
     </main>

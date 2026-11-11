@@ -179,11 +179,11 @@ export function runStateMachine(__session, __parsed, __itemPrices) {
   var WELCOME_IMAGE_URL = MSG_HEADER_URL;
   var OTHER_MESSAGES_IMAGE_URL = MSG_HEADER_URL;
   var MENU_IMAGE_URL = MSG_HEADER_URL;
-  var PVSTUDY_IMAGE_URL = MSG_HEADER_URL; // هوية Al-Raebi الموحدة
-  var SLD_IMAGE_URL = MSG_HEADER_URL; // هوية Al-Raebi الموحدة
-  var QUOTE_NEXT_IMAGE_URL = MSG_HEADER_URL; // هوية Al-Raebi الموحدة
-  var PAY_WALLET_IMAGE_URL = MSG_HEADER_URL; // هوية Al-Raebi الموحدة
-  var PAY_NETWORK_IMAGE_URL = MSG_HEADER_URL; // هوية Al-Raebi الموحدة
+  var PVSTUDY_IMAGE_URL = MSG_HEADER_URL; // هوية الراعبي الموحدة
+  var SLD_IMAGE_URL = MSG_HEADER_URL; // هوية الراعبي الموحدة
+  var QUOTE_NEXT_IMAGE_URL = MSG_HEADER_URL; // هوية الراعبي الموحدة
+  var PAY_WALLET_IMAGE_URL = MSG_HEADER_URL; // هوية الراعبي الموحدة
+  var PAY_NETWORK_IMAGE_URL = MSG_HEADER_URL; // هوية الراعبي الموحدة
   function payWayText() { return String(service_needed || session.service_needed || ''); }
   function payHeaderImage() {
     var w = payWayText();
@@ -952,7 +952,7 @@ export function runStateMachine(__session, __parsed, __itemPrices) {
     // 2) ابحث في الاسم والتفاصيل كلها، مع أولوية kWh / كيلو وات ساعة.
     var mk = s.match(/(\d+(?:[.,]\d+)?)\s*(?:كيلو\s*وات\s*ساعة|كيلووات\s*ساعة|كيلو\s*واط\s*ساعة|kWh)(?![a-z])/i);
     if (mk) { return mk[1].replace(',', '.'); }
-    // 3) بعض بيانات Al-Raebi القديمة تكتب "16 كيلو وات" وتقصد سعة البطارية.
+    // 3) بعض بيانات الراعبي القديمة تكتب "16 كيلو وات" وتقصد سعة البطارية.
     var mb = s.match(/(?:بطارية|بايلونتك|pylontech|fidus|hthium|heroee)[^0-9]{0,120}(\d+(?:[.,]\d+)?)\s*(?:كيلو\s*وات|كيلووات|كيلو\s*واط|كيلو)(?![a-z])/i);
     if (mb) { return mb[1].replace(',', '.'); }
     // 4) إذا كانت السعة فقط بالـWh، حوّلها إلى kWh.
@@ -5569,7 +5569,7 @@ export function runStateMachine(__session, __parsed, __itemPrices) {
 
   // بنود العروض الجاهزة (PDF جاهز) تُبنى من QUOTE_IMG_ITEMS لأن quote_items لا تُملأ في تلك المسارات
   var quote_images = [];
-  if (false) { // صور مكونات العرض معطلة؛ تُستخدم هوية Al-Raebi فقط
+  if (false) { // صور مكونات العرض معطلة؛ تُستخدم هوية الراعبي فقط
     var __qi = stripBaseItems(Array.isArray(quote_items) ? quote_items.slice(0) : []);
     if (!__qi.length && quote_number && QUOTE_IMG_ITEMS[quote_number]) {
       __qi = stripBaseItems(QUOTE_IMG_ITEMS[quote_number].slice(0));
@@ -5676,7 +5676,7 @@ export function runStateMachine(__session, __parsed, __itemPrices) {
   }
   has_pre_text = !!pre_payload;
 
-  // هوية Al-Raebi في رأس الرسالة نفسها؛ النص القصير يكون تعليق الصورة لا رسالة ثانية.
+  // هوية الراعبي في رأس الرسالة نفسها؛ النص القصير يكون تعليق الصورة لا رسالة ثانية.
   function __applyActesIdentity(p) {
     if (!p) { return p; }
     if (p.type === 'interactive' && p.interactive && p.interactive.type === 'button') {

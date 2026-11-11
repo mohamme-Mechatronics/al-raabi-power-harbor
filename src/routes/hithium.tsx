@@ -12,9 +12,9 @@ export const Route = createFileRoute("/hithium")({
   head: () => ({
     meta: [
       { title: "HiTHIUM — أنظمة تخزين الطاقة بالبطاريات | Al-Raebi" },
-      { name: "description", content: "HiTHIUM HeroEE: بطاريات منزلية وخزانات تخزين تجارية وصناعية بخلايا 314Ah وعمر 11000 دورة — المواصفات والكتالوجات لدى Al-Raebi." },
+      { name: "description", content: "HiTHIUM HeroEE: بطاريات منزلية وخزانات تخزين تجارية وصناعية بخلايا 314Ah وعمر 11000 دورة — المواصفات والكتالوجات لدى الراعبي." },
       { property: "og:title", content: "HiTHIUM — تخزين طاقة آمن وطويل العمر" },
-      { property: "og:description", content: "حلول HiTHIUM لتخزين الطاقة للمنازل والقطاع التجاري والصناعي، بالعربية عبر Al-Raebi." },
+      { property: "og:description", content: "حلول HiTHIUM لتخزين الطاقة للمنازل والقطاع التجاري والصناعي، بالعربية عبر الراعبي." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -120,7 +120,7 @@ function HithiumPage() {
       </section>
 
       <AgencyShowcase brand="hithium" />
-      <footer className="border-t border-border bg-card py-8 text-center text-sm text-muted-foreground">HiTHIUM — متوفر لدى Al-Raebi لحلول أنظمة الطاقة</footer>
+      <footer className="border-t border-border bg-card py-8 text-center text-sm text-muted-foreground">HiTHIUM — متوفر لدى الراعبي لحلول أنظمة الطاقة</footer>
       {sel && <BrandProductDetail product={sel} accent="#00a0e9" gallery={["/media/hithium-legend-112s.webp","/media/hithium-legend-112c.webp","/media/items/battery-hithium-legnd-16kwh.webp","/media/items/battery-hithium-12v-314ah.webp"]} onClose={() => setSel(null)} />}
     </main>
   );
