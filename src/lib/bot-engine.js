@@ -175,8 +175,8 @@ export function runStateMachine(__session, __parsed, __itemPrices) {
   // صور رسائل واتساب تُرسل لخدمة واتساب الخارجية، لذلك تحتاج رابطاً عاماً —
   // وهي الآن مستضافة داخل ملفات هذا المشروع نفسه (public/brand) وليس على موقع خارجي.
   var BRAND_BASE = '/brand';
-  var LOGO_URL = BRAND_BASE + '/actes-logo.png';
-  var MSG_HEADER_URL = BRAND_BASE + '/actes-message-header.jpg';
+  var LOGO_URL = BRAND_BASE + '/alraebi-logo-full.png';
+  var MSG_HEADER_URL = BRAND_BASE + '/alraebi-logo-full.png';
   var WELCOME_IMAGE_URL = MSG_HEADER_URL;
   var OTHER_MESSAGES_IMAGE_URL = MSG_HEADER_URL;
   var MENU_IMAGE_URL = MSG_HEADER_URL;

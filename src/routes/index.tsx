@@ -86,8 +86,6 @@ import agricultureImageAsset from "@/assets/imported/src/assets/actes-agricultur
 const agricultureImage = agricultureImageAsset.url;
 import homeHeroAsset from "@/assets/imported/src/assets/actes-home-hero.webp.asset.json";
 const homeHero = homeHeroAsset.url;
-import partnersStripAsset from "@/assets/imported/src/assets/partners-strip.webp.asset.json";
-const partnersStrip = partnersStripAsset.url;
 
 import refCardQuoteAsset from "@/assets/imported/src/assets/card-quote.webp.asset.json";
 const refCardQuote = refCardQuoteAsset.url;
