@@ -11,17 +11,18 @@ export function AppUrlAdmin() {
   const [draft, setDraft] = useState("");
   const [msg, setMsg] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [confirming, setConfirming] = useState(false);
 
   useEffect(() => {
     getUrl().then((r) => { setCurrent(r); setDraft(r.url); }).catch(() => setMsg("تعذر قراءة الرابط الحالي."));
   }, [getUrl]);
 
   async function apply() {
-    if (!window.confirm(`سيتم نقل كل تطبيقات الأندرويد إلى:\n${draft}\nهل أنت متأكد؟`)) return;
+    setConfirming(false);
     setBusy(true); setMsg(null);
     try {
       const password = window.localStorage.getItem("actes.adminpw") || "";
-      const r = await saveUrl({ data: { password, url: draft } });
+      const r = await saveUrl({ data: { password, url: draft.trim() } });
       if (r.ok) { setCurrent({ url: r.url, updatedAt: r.updatedAt }); setDraft(r.url); setMsg("تم اعتماد الرابط الجديد ✔"); }
       else setMsg(r.error);
     } catch { setMsg("فشل الحفظ — تأكد من كلمة مرور الإدارة."); }
@@ -36,10 +37,21 @@ export function AppUrlAdmin() {
       {current?.updatedAt && <p className="mt-1 text-[10px] text-muted-foreground">آخر اعتماد: {new Date(current.updatedAt).toLocaleString("ar")}</p>}
       <label className="mt-3 block text-[11px] font-bold">الرابط الجديد</label>
       <input dir="ltr" value={draft} onChange={(e) => setDraft(e.target.value)} placeholder="https://..." className="mt-1 w-full rounded-md border border-border bg-background px-3 py-2 text-sm" />
-      <button type="button" disabled={busy || !draft || draft === current?.url} onClick={apply}
-        className="mt-3 inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-xs font-black text-brand-foreground disabled:opacity-50">
-        <RefreshCw className="size-4" /> تحديث واعتماد الرابط المرجعي الجديد
-      </button>
+      {!confirming ? (
+        <button type="button" disabled={busy || !draft.trim()} onClick={() => { setMsg(null); if (draft.trim() === current?.url) { setMsg("هذا هو الرابط المعتمد حالياً — اكتب رابطاً جديداً."); return; } setConfirming(true); }}
+          className="mt-3 inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-xs font-black text-brand-foreground disabled:opacity-50">
+          <RefreshCw className={`size-4 ${busy ? "animate-spin" : ""}`} /> {busy ? "جارٍ الاعتماد…" : "تحديث واعتماد الرابط المرجعي الجديد"}
+        </button>
+      ) : (
+        <div className="mt-3 rounded-lg border border-border bg-muted p-3">
+          <p className="text-[11px] font-bold">سيتم نقل كل تطبيقات الأندرويد إلى:</p>
+          <p dir="ltr" className="mt-1 break-all text-xs font-black">{draft.trim()}</p>
+          <div className="mt-2 flex gap-2">
+            <button type="button" onClick={apply} className="rounded-full bg-brand px-4 py-1.5 text-xs font-black text-brand-foreground">تأكيد الاعتماد</button>
+            <button type="button" onClick={() => setConfirming(false)} className="rounded-full border border-border px-4 py-1.5 text-xs font-bold">إلغاء</button>
+          </div>
+        </div>
+      )}
       {msg && <p className="mt-2 text-[11px] font-bold">{msg}</p>}
     </section>
   );
