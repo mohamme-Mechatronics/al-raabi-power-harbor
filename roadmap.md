@@ -9,6 +9,7 @@
 - [x] Fit the app to laptop screens: home cards fill the height, top picture sized for laptops, downloads page rebuilt as a full page.
 - [x] Android app: signed installable APK, offered on the downloads page, opens the link the admin approves.
 - [x] Keep the Android app source in the project (android-app/) plus a workflow that builds the APK, so the uploaded repository holds everything.
+- [x] Upload the whole project to GitHub (private repo mohamme-Mechatronics/al-raebi, 882 files, .env and .lovable left out).
 - [ ] Switch quote tool to the new products: prices waiting on user.
 - [ ] Phase two: videos (user will provide/edit later).
 - [ ] Import existing orders/notifications: waiting for an export from the old project.
