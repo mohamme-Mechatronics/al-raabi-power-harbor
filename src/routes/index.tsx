@@ -844,7 +844,7 @@ function ActesApp() {
       <AppSidebar active={isHome ? "home" : "quote"} onNavigate={navFromMenu} onSettings={() => setSettingsOpen(true)} onExit={leaveApp} />
       <div className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden lg:col-start-1 lg:row-start-1">
         <TopBar isAdmin={isAdmin} clientName={clientName} onExitAdmin={exitAdmin} onSettings={() => setSettingsOpen(true)} onExit={leaveApp} />
-         <main ref={mainRef} className="mx-auto flex w-full min-h-0 flex-1 overflow-y-auto px-3 py-3 pb-24 sm:px-6 lg:px-8 lg:pb-4 xl:px-10 2xl:px-14">
+         <main ref={mainRef} className="mx-auto flex w-full min-h-0 flex-1 overflow-y-auto px-3 py-3 pb-[4.5rem] sm:px-6 lg:px-8 lg:pb-4 xl:px-10 2xl:px-14">
           {busy && (
             // شريط تقدّم رفيع لا يحجب الشاشة ولا يقطع سلاسة الانتقال بين الخطوات
             <div role="status" aria-label="جارٍ تجهيز الخطوة التالية" className="thin-progress fixed inset-x-0 top-0 z-50 h-0.5 overflow-hidden bg-brand/15" />
@@ -1442,7 +1442,7 @@ function HomeDashboard({ onService, onProducts }: { onService: (kind: "quote" | 
     setScreenSpeech("الشاشة الرئيسية لالراعبي. يمكنك طلب عرض سعر، أو استكشاف حلول أنظمة الطاقة، أو التواصل مع الدعم الفني، أو التعرف على منتجاتنا.");
   }, []);
   return (
-    <div className="screen-enter flex min-h-full w-full flex-col gap-2 self-start lg:h-full lg:min-h-0">
+    <div className="screen-enter flex min-h-[calc(100dvh-7.75rem-env(safe-area-inset-bottom))] w-full flex-col gap-2 self-start lg:h-full lg:min-h-0">
       <CorporateHero />
       <section data-photo-section className="min-h-0 shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm lg:min-h-0 lg:shrink lg:flex-1 lg:max-h-[34dvh]">
         <img src={homeHero} alt="الراعبي للتجارة" loading="eager" decoding="sync" fetchPriority="high" className="block h-14 w-full object-cover object-center sm:h-16 lg:h-full lg:w-full lg:aspect-auto" />
@@ -1453,7 +1453,7 @@ function HomeDashboard({ onService, onProducts }: { onService: (kind: "quote" | 
       <PartnersStrip />
 
 
-      <section className="stagger-in grid shrink-0 grid-cols-2 gap-2 sm:grid-cols-4 lg:min-h-0 lg:flex-1 lg:gap-3">
+      <section className="stagger-in grid flex-1 grid-cols-2 gap-2 sm:grid-cols-4 lg:min-h-0 lg:gap-3">
         <ServiceCard image={refCardQuote} icon={<FileText />} title="طلب عرض سعر" description="احصل على أفضل العروض والأسعار المناسبة لمشروعك." action="ابدأ الآن" tone="brand" onClick={() => onService("quote")} />
         <ServiceCard image={refCardEnergy} icon={<Sun />} title="حلول أنظمة الطاقة" description="اكتشف حلولنا المتكاملة لأنظمة الشمسية للمنازل والمنشآت." action="حلول الطاقة" tone="energy" onClick={() => onService("energy")} />
         <ServiceCard image={refCardSupport} icon={<Headphones />} title="الدعم الفني" description="فريقنا المتخصص جاهز لمساعدتك في أي استفسار أو مشكلة فنية." action="تواصل معنا" tone="skyline" onClick={() => onService("support")} />
@@ -1489,11 +1489,11 @@ function ServiceCard({ image, icon, title, description, action, tone, onClick }:
   return (
     <button type="button" onClick={onClick} aria-label={title} className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card text-right shadow-sm transition hover:shadow-md">
       <span data-photo-frame className="block aspect-[16/9] w-full overflow-hidden bg-muted"><img data-photo src={image} alt={title} loading="eager" decoding="async" width={1280} height={720} className="size-full object-cover transition duration-500 group-hover:scale-[1.03]" /></span>
-      <span className="relative flex flex-1 flex-col px-2 pb-2 pt-4 text-center lg:justify-center lg:px-3 lg:pb-2.5 lg:pt-5">
-        <span className={`absolute -top-3 right-1/2 grid size-6 translate-x-1/2 place-items-center rounded-full border-2 border-card shadow-md lg:size-8 ${circle} [&_svg]:size-3 lg:[&_svg]:size-4`}>{icon}</span>
-        <span className="text-[11px] font-black leading-tight text-navy lg:text-[15px]">{title}</span>
-        <span className="mx-auto mb-1 mt-0.5 line-clamp-2 max-w-xs text-[9px] leading-3 text-muted-foreground lg:mb-2 lg:mt-1 lg:line-clamp-3 lg:max-w-sm lg:text-[12px] lg:leading-4">{description}</span>
-        <span className={`mx-auto mb-0 mt-auto inline-flex w-full max-w-32 items-center justify-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold shadow-sm transition group-hover:opacity-90 lg:max-w-44 lg:gap-1.5 lg:px-3 lg:py-1.5 lg:text-[13px] ${btn}`}>
+      <span className="relative flex flex-1 flex-col justify-center px-2 pb-2 pt-4 text-center lg:justify-center lg:px-3 lg:pb-2.5 lg:pt-5">
+        <span className={`absolute -top-3 right-1/2 grid size-7 translate-x-1/2 place-items-center rounded-full border-2 border-card shadow-md lg:size-8 ${circle} [&_svg]:size-3 lg:[&_svg]:size-4`}>{icon}</span>
+        <span className="text-[12px] font-black leading-tight text-navy lg:text-[15px]">{title}</span>
+        <span className="mx-auto mb-1 mt-0.5 line-clamp-2 max-w-xs text-[10px] leading-4 text-muted-foreground lg:mb-2 lg:mt-1 lg:line-clamp-3 lg:max-w-sm lg:text-[12px] lg:leading-4">{description}</span>
+        <span className={`mx-auto mb-0 inline-flex w-full max-w-32 items-center justify-center gap-1 rounded-full px-2 py-1 text-[11px] font-bold shadow-sm transition group-hover:opacity-90 lg:mt-auto lg:max-w-44 lg:gap-1.5 lg:px-3 lg:py-1.5 lg:text-[13px] ${btn}`}>
           <ArrowRight className="size-3 lg:size-4" />{action}
         </span>
 
