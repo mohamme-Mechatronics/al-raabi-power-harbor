@@ -9,6 +9,7 @@ import {
   type Notif,
 } from "@/lib/orders";
 import { money } from "@/lib/present";
+import { AppUrlAdmin } from "@/components/app-url-admin";
 import confirmedImageAsset from "@/assets/imported/src/assets/admin-confirmed.webp.asset.json";
 const confirmedImage = confirmedImageAsset.url;
 import cancelledImageAsset from "@/assets/imported/src/assets/admin-cancelled.webp.asset.json";
@@ -70,6 +71,7 @@ export function AdminDashboard({ onExit }: { onExit: () => void }) {
       </header>
 
       <main className="mx-auto w-full max-w-5xl px-4 py-6 sm:px-6">
+        <AppUrlAdmin />
         <section className="grid gap-2 sm:grid-cols-3">
           {BUCKETS.map((bucket) => {
             const selected = tab === bucket.id;
