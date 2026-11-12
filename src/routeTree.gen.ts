@@ -24,6 +24,7 @@ import { Route as DownloadsACTESWindowsX64DotzipRouteImport } from './routes/dow
 import { Route as FontsSplatRouteImport } from './routes/fonts.$'
 import { Route as MediaSplatRouteImport } from './routes/media.$'
 import { Route as VideosSplatRouteImport } from './routes/videos.$'
+import { Route as ApiPublicAppUrlRouteImport } from './routes/api/public/app-url'
 import { Route as ApiPublicOrdersRouteImport } from './routes/api/public/orders'
 import { Route as ApiPublicWaInvoiceRouteImport } from './routes/api/public/wa-invoice'
 
@@ -103,6 +104,11 @@ const VideosSplatRoute = VideosSplatRouteImport.update({
   path: '/videos/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicAppUrlRoute = ApiPublicAppUrlRouteImport.update({
+  id: '/api/public/app-url',
+  path: '/api/public/app-url',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicOrdersRoute = ApiPublicOrdersRouteImport.update({
   id: '/api/public/orders',
   path: '/api/public/orders',
@@ -130,6 +136,7 @@ export interface FileRoutesByFullPath {
   '/fonts/$': typeof FontsSplatRoute
   '/media/$': typeof MediaSplatRoute
   '/videos/$': typeof VideosSplatRoute
+  '/api/public/app-url': typeof ApiPublicAppUrlRoute
   '/api/public/orders': typeof ApiPublicOrdersRoute
   '/api/public/wa-invoice': typeof ApiPublicWaInvoiceRoute
 }
@@ -149,6 +156,7 @@ export interface FileRoutesByTo {
   '/fonts/$': typeof FontsSplatRoute
   '/media/$': typeof MediaSplatRoute
   '/videos/$': typeof VideosSplatRoute
+  '/api/public/app-url': typeof ApiPublicAppUrlRoute
   '/api/public/orders': typeof ApiPublicOrdersRoute
   '/api/public/wa-invoice': typeof ApiPublicWaInvoiceRoute
 }
@@ -169,6 +177,7 @@ export interface FileRoutesById {
   '/fonts/$': typeof FontsSplatRoute
   '/media/$': typeof MediaSplatRoute
   '/videos/$': typeof VideosSplatRoute
+  '/api/public/app-url': typeof ApiPublicAppUrlRoute
   '/api/public/orders': typeof ApiPublicOrdersRoute
   '/api/public/wa-invoice': typeof ApiPublicWaInvoiceRoute
 }
@@ -190,6 +199,7 @@ export interface FileRouteTypes {
     | '/fonts/$'
     | '/media/$'
     | '/videos/$'
+    | '/api/public/app-url'
     | '/api/public/orders'
     | '/api/public/wa-invoice'
   fileRoutesByTo: FileRoutesByTo
@@ -209,6 +219,7 @@ export interface FileRouteTypes {
     | '/fonts/$'
     | '/media/$'
     | '/videos/$'
+    | '/api/public/app-url'
     | '/api/public/orders'
     | '/api/public/wa-invoice'
   id:
@@ -228,6 +239,7 @@ export interface FileRouteTypes {
     | '/fonts/$'
     | '/media/$'
     | '/videos/$'
+    | '/api/public/app-url'
     | '/api/public/orders'
     | '/api/public/wa-invoice'
   fileRoutesById: FileRoutesById
@@ -248,6 +260,7 @@ export interface RootRouteChildren {
   FontsSplatRoute: typeof FontsSplatRoute
   MediaSplatRoute: typeof MediaSplatRoute
   VideosSplatRoute: typeof VideosSplatRoute
+  ApiPublicAppUrlRoute: typeof ApiPublicAppUrlRoute
   ApiPublicOrdersRoute: typeof ApiPublicOrdersRoute
   ApiPublicWaInvoiceRoute: typeof ApiPublicWaInvoiceRoute
 }
@@ -359,6 +372,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VideosSplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/app-url': {
+      id: '/api/public/app-url'
+      path: '/api/public/app-url'
+      fullPath: '/api/public/app-url'
+      preLoaderRoute: typeof ApiPublicAppUrlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/orders': {
       id: '/api/public/orders'
       path: '/api/public/orders'
@@ -392,6 +412,7 @@ const rootRouteChildren: RootRouteChildren = {
   FontsSplatRoute: FontsSplatRoute,
   MediaSplatRoute: MediaSplatRoute,
   VideosSplatRoute: VideosSplatRoute,
+  ApiPublicAppUrlRoute: ApiPublicAppUrlRoute,
   ApiPublicOrdersRoute: ApiPublicOrdersRoute,
   ApiPublicWaInvoiceRoute: ApiPublicWaInvoiceRoute,
 }
