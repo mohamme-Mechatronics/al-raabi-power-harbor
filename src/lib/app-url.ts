@@ -1,4 +1,4 @@
-export const DEFAULT_APP_URL = "https://al-raabi-power-harbor.lovable.app";
+export const DEFAULT_APP_URL = "https://al-power-harbor.lovable.app";
 
 /** Only https web addresses may become the Android app's reference link. */
 export function normalizeAppUrl(input: string): string | null {
