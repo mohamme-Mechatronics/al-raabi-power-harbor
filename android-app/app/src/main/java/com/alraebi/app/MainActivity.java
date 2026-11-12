@@ -29,6 +29,7 @@ public class MainActivity extends Activity {
     WebSettings s = web.getSettings();
     s.setJavaScriptEnabled(true); s.setDomStorageEnabled(true); s.setMediaPlaybackRequiresUserGesture(false);
     web.setWebViewClient(new WebViewClient());
+    web.setWebChromeClient(new android.webkit.WebChromeClient());
     setContentView(web);
     String url = prefs.getString("url", DEFAULT_URL);
     web.loadUrl(url);
