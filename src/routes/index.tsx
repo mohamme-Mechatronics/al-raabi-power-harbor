@@ -76,13 +76,13 @@ import {
   Users,
   Factory,
 } from "lucide-react";
-import residentialImageAsset from "@/assets/imported/src/assets/actes-residential.webp.asset.json";
+import residentialImageAsset from "@/assets/brand/alraebi-system-residential.webp.asset.json";
 const residentialImage = residentialImageAsset.url;
-import commercialImageAsset from "@/assets/imported/src/assets/actes-commercial.webp.asset.json";
+import commercialImageAsset from "@/assets/brand/alraebi-system-commercial.webp.asset.json";
 const commercialImage = commercialImageAsset.url;
-import industrialImageAsset from "@/assets/imported/src/assets/actes-industrial.webp.asset.json";
+import industrialImageAsset from "@/assets/brand/alraebi-system-industrial.webp.asset.json";
 const industrialImage = industrialImageAsset.url;
-import agricultureImageAsset from "@/assets/imported/src/assets/actes-agriculture.webp.asset.json";
+import agricultureImageAsset from "@/assets/brand/alraebi-system-agriculture.webp.asset.json";
 const agricultureImage = agricultureImageAsset.url;
 import homeHeroAsset from "@/assets/brand/alraebi-home-hero.webp.asset.json";
 const homeHero = homeHeroAsset.url;
