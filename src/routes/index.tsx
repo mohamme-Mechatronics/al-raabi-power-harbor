@@ -76,13 +76,13 @@ import {
   Users,
   Factory,
 } from "lucide-react";
-import residentialImageAsset from "@/assets/imported/src/assets/actes-residential.webp.asset.json";
+import residentialImageAsset from "@/assets/brand/alraebi-system-residential.webp.asset.json";
 const residentialImage = residentialImageAsset.url;
-import commercialImageAsset from "@/assets/imported/src/assets/actes-commercial.webp.asset.json";
+import commercialImageAsset from "@/assets/brand/alraebi-system-commercial.webp.asset.json";
 const commercialImage = commercialImageAsset.url;
-import industrialImageAsset from "@/assets/imported/src/assets/actes-industrial.webp.asset.json";
+import industrialImageAsset from "@/assets/brand/alraebi-system-industrial.webp.asset.json";
 const industrialImage = industrialImageAsset.url;
-import agricultureImageAsset from "@/assets/imported/src/assets/actes-agriculture.webp.asset.json";
+import agricultureImageAsset from "@/assets/brand/alraebi-system-agriculture.webp.asset.json";
 const agricultureImage = agricultureImageAsset.url;
 import homeHeroAsset from "@/assets/brand/alraebi-home-hero.webp.asset.json";
 const homeHero = homeHeroAsset.url;
@@ -1519,53 +1519,40 @@ const SUPPORT_STAGES = ["بيانات العميل", "الموقع", "الجها
 
 function SupportProgress({ step }: { step: string }) {
   const current = step === "sup_name" ? 0 : step.startsWith("sup_city") ? 1 : step === "sup_device" ? 2 : 3;
+  return <StageBar stages={SUPPORT_STAGES} current={current} tone="skyline" />;
+}
+
+// شريط مراحل أفقي واحد: دوائر مرقمة يصلها خط يمتلئ مع التقدم
+function StageBar({ stages, current, tone }: { stages: string[]; current: number; tone: "brand" | "skyline" }) {
+  const fill = tone === "brand" ? "bg-brand" : "bg-skyline";
+  const text = tone === "brand" ? "text-brand" : "text-skyline";
+  const ring = tone === "brand" ? "ring-brand/25" : "ring-skyline/25";
+  const fg = tone === "brand" ? "text-brand-foreground" : "text-skyline-foreground";
+  const pct = stages.length > 1 ? (current / (stages.length - 1)) * 100 : 0;
   return (
-    <div className="flex flex-wrap items-center gap-1.5">
-      {SUPPORT_STAGES.map((stage, index) => {
-        const done = index < current;
-        const active = index === current;
-        return (
-          <span key={stage} className="flex items-center gap-1.5">
-            <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-black transition lg:text-[11px] ${active ? "bg-skyline text-skyline-foreground shadow-sm" : done ? "bg-skyline/10 text-skyline" : "bg-muted text-muted-foreground"}`}>
-              {done ? <Check className="size-3" /> : <span className="grid size-3.5 place-items-center rounded-full bg-current/20 text-[8px]">{index + 1}</span>}
-              {stage}
-            </span>
-            {index < SUPPORT_STAGES.length - 1 && <span className={`h-px w-3 ${done ? "bg-skyline/50" : "bg-border"}`} />}
-          </span>
-        );
-      })}
-    </div>
+    <nav aria-label="مراحل الطلب" className="mb-4 rounded-2xl border border-border bg-card px-3 pb-2.5 pt-3 shadow-sm">
+      <ol className="relative grid" style={{ gridTemplateColumns: `repeat(${stages.length}, minmax(0, 1fr))` }}>
+        <span aria-hidden className="absolute top-3.5 h-0.5 rounded-full bg-border" style={{ insetInlineStart: `${50 / stages.length}%`, insetInlineEnd: `${50 / stages.length}%` }} />
+        <span aria-hidden className={`absolute top-3.5 h-0.5 rounded-full transition-all duration-500 ${fill}`} style={{ insetInlineStart: `${50 / stages.length}%`, width: `calc(${pct}% * ${(stages.length - 1) / stages.length})` }} />
+        {stages.map((stage, index) => {
+          const done = index < current;
+          const active = index === current;
+          return (
+            <li key={stage} aria-current={active ? "step" : undefined} className="relative flex min-w-0 flex-col items-center gap-1.5 text-center">
+              <span className={`relative z-10 grid size-7 place-items-center rounded-full text-[11px] font-black transition ${done || active ? `${fill} ${fg}` : "border border-border bg-card text-muted-foreground"} ${active ? `ring-4 ${ring}` : ""}`}>
+                {done ? <Check className="size-3.5" /> : index + 1}
+              </span>
+              <span className={`w-full px-0.5 text-[10px] font-black leading-tight sm:text-xs ${active ? text : done ? "text-foreground" : "text-muted-foreground"}`}>{stage}</span>
+            </li>
+          );
+        })}
+      </ol>
+    </nav>
   );
 }
 
-
 function StepProgress({ step, hasQuote }: { step: string; hasQuote: boolean }) {
-  const current = stageIndex(step, hasQuote);
-  return (
-    <div className="flex flex-wrap items-center gap-1.5">
-      {QUOTE_STAGES.map((stage, index) => {
-        const done = index < current;
-        const active = index === current;
-        return (
-          <span key={stage} className="flex items-center gap-1.5">
-            <span
-              className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-black transition lg:text-[11px] ${
-                active
-                  ? "bg-brand text-brand-foreground shadow-sm"
-                  : done
-                    ? "bg-brand/10 text-brand"
-                    : "bg-muted text-muted-foreground"
-              }`}
-            >
-              {done ? <Check className="size-3" /> : <span className="grid size-3.5 place-items-center rounded-full bg-current/20 text-[8px]">{index + 1}</span>}
-              {stage}
-            </span>
-            {index < QUOTE_STAGES.length - 1 && <span className={`h-px w-3 ${done ? "bg-brand/50" : "bg-border"}`} />}
-          </span>
-        );
-      })}
-    </div>
-  );
+  return <StageBar stages={QUOTE_STAGES} current={stageIndex(step, hasQuote)} tone="brand" />;
 }
 
 
@@ -1643,10 +1630,10 @@ function QuoteWorkspace({ view, session, step, draft, setDraft, onPick, onBack, 
   return (
     <div className="screen-enter w-full space-y-6 pb-8">
       <section className="min-w-0">
+        {!isEnergyMenu && !isSupportPath && <StepProgress step={step} hasQuote={Boolean(view.quote)} />}
+        {isSupportPath && <SupportProgress step={step} />}
         <div className="mb-5 flex items-end justify-between gap-4 border-b border-border pb-3">
           <div className="min-w-0">
-            {!isEnergyMenu && !isSupportPath && <StepProgress step={step} hasQuote={Boolean(view.quote)} />}
-            {isSupportPath && <SupportProgress step={step} />}
             <h1 className="mt-2 text-xl font-black sm:text-2xl">{title}</h1>
             <span className="mt-2 block h-1 w-10 rounded-full bg-brand" />
           </div>
@@ -2346,7 +2333,10 @@ function HourlyLoadEntry({ onSubmit }: { onSubmit: (value: string) => void }) {
   );
 }
 
-function MediaGallery({ images }: { images: View["images"] }) {
+function MediaGallery({ images: allImages }: { images: View["images"] }) {
+  // صورة شعار الهوية لا تُعرض وسط المحادثة في أي مسار
+  const images = allImages.filter((image) => !/alraebi-logo|\/brand\//i.test(image.url));
+  if (images.length === 0) return null;
   return <div className={`mb-4 grid gap-2 ${images.length > 1 ? "md:grid-cols-2" : ""}`}>{images.map((image, index) => <figure data-photo-section key={index} className="overflow-hidden rounded-lg border border-border bg-muted/35"><div className="flex min-h-24 items-center justify-center p-2"><img src={image.url} alt={image.caption || "صورة من منتجات الراعبي"} className="max-h-[210px] w-auto max-w-full object-contain" /></div>{image.caption && <figcaption className="border-t border-border bg-card px-3 py-2 text-[11px] leading-5 text-muted-foreground">{image.caption}</figcaption>}</figure>)}</div>;
 }
 
