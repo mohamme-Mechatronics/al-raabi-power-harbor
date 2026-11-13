@@ -1622,6 +1622,23 @@ function QuoteWorkspace({ view, session, step, draft, setDraft, onPick, onBack, 
   const showEntry = step !== "done" && !view.quote && !view.sld && !isProjectSelection && (step in ENTRY_PROMPTS || (view.needsInput && visibleOptions.length === 0));
 
 
+  // أسطر النص الظاهرة؛ نحذف القائمة المرقّمة التي تكرر عناوين الأزرار نفسها
+  const textLines = useMemo(() => {
+    const allLines = view.sections.flatMap((section) => section.lines);
+    const showAllLines = step.startsWith("item_") || step === "agr_result";
+    const lines = showAllLines ? allLines : allLines.slice(0, 2);
+    const titles = new Set(view.options.map((o) => o.title.replace(/…$/, "").trim()));
+    return lines.filter((line) => {
+      const m = line.trim().match(/^\d+\s*[–\-.)]\s*(.+)$/);
+      return !(m && titles.has(m[1].trim()));
+    });
+  }, [view.sections, view.options, step]);
+  const galleryCount = view.images.filter((image) => !/alraebi-logo|\/brand\//i.test(image.url)).length;
+  // شاشة اختيار بسيطة: أزرار فقط بدون بطاقة حولها
+  const bareChoices = !ecoScreen && !sldScreen && !studyScreen && !view.quote && !view.sld && !isProjectSelection
+    && step !== "done" && !showEntry && visibleOptions.length > 0 && textLines.length === 0
+    && view.specs.length === 0 && view.docs.length === 0 && (galleryCount === 0);
+
   const submit = () => {
     if (view.needsInput && draft.trim()) onPick(draft);
     else if (selected) onPick(selected);
@@ -1653,7 +1670,7 @@ function QuoteWorkspace({ view, session, step, draft, setDraft, onPick, onBack, 
           </div>
         </div>
 
-        <div className="rounded-lg border border-border bg-card p-4 shadow-sm sm:p-6">
+        <div className={bareChoices ? "" : "rounded-lg border border-border bg-card p-4 shadow-sm sm:p-6"}>
 
             {ecoScreen ? (
               <EconomicStudy
@@ -1685,21 +1702,17 @@ function QuoteWorkspace({ view, session, step, draft, setDraft, onPick, onBack, 
               <>
             {view.images.length > 0 && !view.quote && !isProjectSelection && <MediaGallery images={view.images} />}
 
+            {!bareChoices && (
             <div className="mb-5 grid grid-cols-[minmax(0,1fr)_auto] items-start gap-4">
               {view.quote || isProjectSelection ? (
                 <div className="min-w-0" />
               ) : (
                 <div className="min-w-0">
-                  {(() => {
-                    const allLines = view.sections.flatMap((section) => section.lines);
-                    // شاشات طلب الأصناف تعرض كل أسطر السلة حتى تظهر جميع الأصناف المضافة
-                    const showAllLines = step.startsWith("item_") || step === "agr_result";
-                    const lines = showAllLines ? allLines : allLines.slice(0, 2);
-                    return lines.map((line, index) => <p key={index} className="text-sm font-medium leading-6 text-foreground sm:text-base">{line}</p>);
-                  })()}
+                  {textLines.map((line, index) => <p key={index} className="text-sm font-medium leading-6 text-foreground sm:text-base">{line}</p>)}
                 </div>
               )}
             </div>
+            )}
 
             {view.specs.length > 0 && <SystemSpecs specs={view.specs} hint={[session["phase_type"], session["system_type"]].filter(Boolean).join(" ")} onOpenProduct={onOpenProduct} />}
             {view.quote && variants && variants.length > 1 && (
@@ -1723,7 +1736,7 @@ function QuoteWorkspace({ view, session, step, draft, setDraft, onPick, onBack, 
                 <QuoteActions onPick={onPick} hideEngineering={String((session as Record<string, unknown>)["menu_choice"] ?? "") === "1"} onEco={view.study ? () => { silenceNextScreen(); setShowEco(true); } : undefined} />
               </div>
             ) : (visibleOptions.length > 0 || showEntry) && (
-              <div className="mt-6 space-y-5 border-t border-border pt-5">
+              <div className={bareChoices ? "space-y-5" : "mt-6 space-y-5 border-t border-border pt-5"}>
                 {showEntry && (step === "ind_shift"
                   ? (() => { const info = shiftEntryInfo(session); return <ShiftEntry key={`shift-${info.offset}-${info.count}`} count={info.count} offset={info.offset} onSubmit={onPick} />; })()
                   : step === "pv_loads"
