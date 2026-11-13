@@ -1542,7 +1542,7 @@ function StageBar({ stages, current, tone }: { stages: string[]; current: number
               <span className={`relative z-10 grid size-7 place-items-center rounded-full text-[11px] font-black transition ${done || active ? `${fill} ${fg}` : "border border-border bg-card text-muted-foreground"} ${active ? `ring-4 ${ring}` : ""}`}>
                 {done ? <Check className="size-3.5" /> : index + 1}
               </span>
-              <span className={`w-full truncate px-0.5 text-[10px] font-black leading-4 sm:text-xs ${active ? text : done ? "text-foreground" : "text-muted-foreground"}`}>{stage}</span>
+              <span className={`w-full px-0.5 text-[10px] font-black leading-tight sm:text-xs ${active ? text : done ? "text-foreground" : "text-muted-foreground"}`}>{stage}</span>
             </li>
           );
         })}
