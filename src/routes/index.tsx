@@ -1629,15 +1629,15 @@ function QuoteWorkspace({ view, session, step, draft, setDraft, onPick, onBack, 
     const lines = showAllLines ? allLines : allLines.slice(0, 2);
     const titles = new Set(view.options.map((o) => o.title.replace(/…$/, "").trim()));
     return lines.filter((line) => {
-      const m = line.trim().match(/^\d+\s*[–\-.)]\s*(.+)$/);
+      const m = line.trim().match(/^\d+\s*[–—\-.):]\s*(.+)$/);
       return !(m && titles.has(m[1].trim()));
     });
   }, [view.sections, view.options, step]);
   const galleryCount = view.images.filter((image) => !/alraebi-logo|\/brand\//i.test(image.url)).length;
   // شاشة اختيار بسيطة: أزرار فقط بدون بطاقة حولها
-  const bareChoices = !ecoScreen && !sldScreen && !studyScreen && !view.quote && !view.sld && !isProjectSelection
-    && step !== "done" && !showEntry && visibleOptions.length > 0 && textLines.length === 0
-    && view.specs.length === 0 && view.docs.length === 0 && (galleryCount === 0);
+  const bareChoices = !ecoScreen && !sldScreen && !studyScreen && !view.quote && !view.sld
+    && step !== "done" && !showEntry && visibleOptions.length > 0 && (isProjectSelection || (textLines.length === 0 && galleryCount === 0))
+    && view.specs.length === 0 && view.docs.length === 0;
 
   const submit = () => {
     if (view.needsInput && draft.trim()) onPick(draft);
