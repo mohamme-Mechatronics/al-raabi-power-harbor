@@ -11,6 +11,7 @@
 - [x] Grow the four home cards slightly on phones so the space above the bottom bar is filled, with a cap so they never look stretched.
 - [x] Keep the Android app source in the project (android-app/) plus a workflow that builds the APK, so the uploaded repository holds everything.
 - [x] Upload the whole project to GitHub (private repo mohamme-Mechatronics/al-raebi, 882 files, .env and .lovable left out).
+- [x] Make the four project-type buttons slightly taller (photo shows uncropped) and enlarge the Al-Raebi logo baked into the four system photos.
 - [ ] Switch quote tool to the new products: prices waiting on user.
 - [ ] Phase two: videos (user will provide/edit later).
 - [ ] Import existing orders/notifications: waiting for an export from the old project.
