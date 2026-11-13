@@ -2346,7 +2346,10 @@ function HourlyLoadEntry({ onSubmit }: { onSubmit: (value: string) => void }) {
   );
 }
 
-function MediaGallery({ images }: { images: View["images"] }) {
+function MediaGallery({ images: allImages }: { images: View["images"] }) {
+  // صورة شعار الهوية لا تُعرض وسط المحادثة في أي مسار
+  const images = allImages.filter((image) => !/alraebi-logo|\/brand\//i.test(image.url));
+  if (images.length === 0) return null;
   return <div className={`mb-4 grid gap-2 ${images.length > 1 ? "md:grid-cols-2" : ""}`}>{images.map((image, index) => <figure data-photo-section key={index} className="overflow-hidden rounded-lg border border-border bg-muted/35"><div className="flex min-h-24 items-center justify-center p-2"><img src={image.url} alt={image.caption || "صورة من منتجات الراعبي"} className="max-h-[210px] w-auto max-w-full object-contain" /></div>{image.caption && <figcaption className="border-t border-border bg-card px-3 py-2 text-[11px] leading-5 text-muted-foreground">{image.caption}</figcaption>}</figure>)}</div>;
 }
 
