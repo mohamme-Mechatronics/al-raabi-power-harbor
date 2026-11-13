@@ -8,6 +8,7 @@
 - [x] Rebrand all four home service-card images and replace the product collage with current products and manufacturer logos.
 - [x] Fit the app to laptop screens: home cards fill the height, top picture sized for laptops, downloads page rebuilt as a full page.
 - [x] Android app: signed installable APK, offered on the downloads page, opens the link the admin approves.
+- [x] Grow the four home cards slightly on phones so the space above the bottom bar is filled, with a cap so they never look stretched.
 - [x] Keep the Android app source in the project (android-app/) plus a workflow that builds the APK, so the uploaded repository holds everything.
 - [x] Upload the whole project to GitHub (private repo mohamme-Mechatronics/al-raebi, 882 files, .env and .lovable left out).
 - [ ] Switch quote tool to the new products: prices waiting on user.
