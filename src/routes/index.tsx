@@ -1442,7 +1442,7 @@ function HomeDashboard({ onService, onProducts }: { onService: (kind: "quote" | 
     setScreenSpeech("الشاشة الرئيسية لالراعبي. يمكنك طلب عرض سعر، أو استكشاف حلول أنظمة الطاقة، أو التواصل مع الدعم الفني، أو التعرف على منتجاتنا.");
   }, []);
   return (
-    <div className="screen-enter flex min-h-[calc(100dvh-7.75rem-env(safe-area-inset-bottom))] w-full flex-col gap-2 self-start lg:h-full lg:min-h-0">
+    <div className="screen-enter flex min-h-[calc(100dvh-7.75rem-env(safe-area-inset-bottom))] w-full flex-col justify-between gap-2 self-start lg:h-full lg:min-h-0">
       <CorporateHero />
       <section data-photo-section className="min-h-0 shrink-0 overflow-hidden rounded-2xl border border-border bg-card shadow-sm lg:min-h-0 lg:shrink lg:flex-1 lg:max-h-[34dvh]">
         <img src={homeHero} alt="الراعبي للتجارة" loading="eager" decoding="sync" fetchPriority="high" className="block h-14 w-full object-cover object-center sm:h-16 lg:h-full lg:w-full lg:aspect-auto" />
@@ -1453,7 +1453,7 @@ function HomeDashboard({ onService, onProducts }: { onService: (kind: "quote" | 
       <PartnersStrip />
 
 
-      <section className="stagger-in grid flex-1 grid-cols-2 gap-2 sm:grid-cols-4 lg:min-h-0 lg:gap-3">
+      <section className="stagger-in grid max-h-[28.75rem] flex-1 grid-cols-2 gap-2 sm:grid-cols-4 lg:max-h-none lg:min-h-0 lg:gap-3">
         <ServiceCard image={refCardQuote} icon={<FileText />} title="طلب عرض سعر" description="احصل على أفضل العروض والأسعار المناسبة لمشروعك." action="ابدأ الآن" tone="brand" onClick={() => onService("quote")} />
         <ServiceCard image={refCardEnergy} icon={<Sun />} title="حلول أنظمة الطاقة" description="اكتشف حلولنا المتكاملة لأنظمة الشمسية للمنازل والمنشآت." action="حلول الطاقة" tone="energy" onClick={() => onService("energy")} />
         <ServiceCard image={refCardSupport} icon={<Headphones />} title="الدعم الفني" description="فريقنا المتخصص جاهز لمساعدتك في أي استفسار أو مشكلة فنية." action="تواصل معنا" tone="skyline" onClick={() => onService("support")} />
