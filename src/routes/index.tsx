@@ -1630,7 +1630,7 @@ function QuoteWorkspace({ view, session, step, draft, setDraft, onPick, onBack, 
     const titles = new Set(view.options.map((o) => o.title.replace(/…$/, "").trim()));
     return lines.filter((line) => {
       const m = line.trim().match(/^\d+\s*[–—\-.):]\s*(.+)$/);
-      return !(m && titles.has(m[1].trim()));
+      return !(m && titles.has((m[1] ?? "").trim()));
     });
   }, [view.sections, view.options, step]);
   const galleryCount = view.images.filter((image) => !/alraebi-logo|\/brand\//i.test(image.url)).length;
